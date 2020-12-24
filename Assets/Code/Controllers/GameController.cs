@@ -11,9 +11,24 @@ namespace ProjectPrikol
 
         private void Start()
         {
-            var moveController = new MoveController();
+            var playerFactory = new PlayerFactory(_data.PlayerData);
+            var cameraFactory = new CameraFactory(_data.CameraData);
 
+            var inputModel = new InputModel(_data.InputData);
+            var playerModel = new PlayerModel(playerFactory);
+            var cameraModel = new CameraModel(cameraFactory);
+
+            var inputController = new InputController(
+                inputModel.Horizontal, inputModel.Vertical,
+                inputModel.MouseX, inputModel.MouseY, 
+                inputModel.Crouch, inputModel.Jump);
+            var moveController = new MoveController(playerModel);
+            var cameraController = new CameraController(cameraModel, playerModel);
+
+            _controllers.Add(inputController);
             _controllers.Add(moveController);
+            _controllers.Add(cameraController);
+            
             _controllers.Initialize();
         }
 

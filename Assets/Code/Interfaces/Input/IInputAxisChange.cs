@@ -1,4 +1,10 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using System;
+
+namespace ProjectPrikol
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IInputAxisChange
+    {
+        event Action<float> OnAxisChanged;
+        void GetAxis();
+    }
 }

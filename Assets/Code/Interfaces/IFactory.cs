@@ -1,7 +1,9 @@
-﻿namespace ProjectPrikol
+﻿using UnityEngine;
+
+namespace ProjectPrikol
 {
-    public class IFactory
+    public interface IFactory
     {
-        
+        GameObject Create();
     }
 }

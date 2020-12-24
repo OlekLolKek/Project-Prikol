@@ -1,4 +1,6 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿namespace ProjectPrikol
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IData
+    {
+    }
 }

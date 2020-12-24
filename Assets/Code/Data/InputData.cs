@@ -2,9 +2,13 @@
 
 namespace ProjectPrikol
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
-    public class InputData : ScriptableObject
+    [CreateAssetMenu(fileName = "InputData", menuName = "Data/InputData")]
+    public class InputData : ScriptableObject, IData
     {
-        
+        [SerializeField] private KeyCode _crouch;
+        [SerializeField] private KeyCode _jump;
+
+        public KeyCode Crouch => _crouch;
+        public KeyCode Jump => _jump;
     }
 }

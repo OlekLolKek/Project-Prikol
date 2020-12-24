@@ -9,24 +9,47 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Controllers" t="Include">
+            <e p="CameraController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
+            <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
+            <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
+            <e p="InputData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+          </e>
+          <e p="Factories" t="Include">
+            <e p="CameraFactory.cs" t="Include" />
+            <e p="PlayerFactory.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="PCInputAxis.cs" t="Include" />
+            <e p="PCInputKey.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="ICleanable.cs" t="Include" />
             <e p="IControllable.cs" t="Include" />
+            <e p="IData.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
+            <e p="IFactory.cs" t="Include" />
             <e p="IInitializable.cs" t="Include" />
             <e p="ILateExecutable.cs" t="Include" />
+            <e p="Input" t="Include">
+              <e p="IInputAxisChange.cs" t="Include" />
+              <e p="IInputKeyPress.cs" t="Include" />
+            </e>
           </e>
-        </e>
-        <e p="Fantasy Skybox FREE" t="Include">
-          <e p="Readme.txt" t="Include" />
+          <e p="Models" t="Include">
+            <e p="CameraModel.cs" t="Include" />
+            <e p="InputModel.cs" t="Include" />
+            <e p="PlayerModel.cs" t="Include" />
+          </e>
+          <e p="Storages" t="Include">
+            <e p="AxisNameStorage.cs" t="Include" />
+          </e>
         </e>
         <e p="Plugins" t="Include">
           <e p="UniRx" t="Include">
