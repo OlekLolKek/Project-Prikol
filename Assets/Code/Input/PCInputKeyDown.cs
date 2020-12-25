@@ -1,20 +1,20 @@
 ﻿using System;
-using ProjectPrikol;
 using UnityEngine;
+
 
 namespace ProjectPrikol
 {
-    public class PCInputKey : IInputKeyPress
+    public class PCInputKeyDown : IInputKeyPress
     {
         public event Action OnKeyPressed = delegate {  };
         private KeyCode _keyCode;
 
-        public PCInputKey(KeyCode keyCode)
+        public PCInputKeyDown(KeyCode keyCode)
         {
             _keyCode = keyCode;
         }
         
-        public void GetKey()
+        public void GetKeyDown()
         {
             if (Input.GetKeyDown(_keyCode))
             {

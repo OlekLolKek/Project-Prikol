@@ -6,6 +6,6 @@ namespace ProjectPrikol
     public interface IInputKeyPress
     {
         event Action OnKeyPressed;
-        void GetKey();
+        void GetKeyDown();
     }
 }

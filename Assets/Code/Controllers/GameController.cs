@@ -21,8 +21,9 @@ namespace ProjectPrikol
             var inputController = new InputController(
                 inputModel.Horizontal, inputModel.Vertical,
                 inputModel.MouseX, inputModel.MouseY, 
-                inputModel.Crouch, inputModel.Jump);
-            var moveController = new MoveController(playerModel);
+                inputModel.StartCrouch, inputModel.StopCrouch,
+                inputModel.Jump);
+            var moveController = new MoveController(playerModel, _data.PlayerData);
             var cameraController = new CameraController(cameraModel, playerModel);
 
             _controllers.Add(inputController);

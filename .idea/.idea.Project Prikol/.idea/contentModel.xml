@@ -27,7 +27,8 @@
           </e>
           <e p="Input" t="Include">
             <e p="PCInputAxis.cs" t="Include" />
-            <e p="PCInputKey.cs" t="Include" />
+            <e p="PCInputKeyDown.cs" t="Include" />
+            <e p="PCInputKeyUp.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="ICleanable.cs" t="Include" />
@@ -40,6 +41,7 @@
             <e p="Input" t="Include">
               <e p="IInputAxisChange.cs" t="Include" />
               <e p="IInputKeyPress.cs" t="Include" />
+              <e p="IInputKeyRelease.cs" t="Include" />
             </e>
           </e>
           <e p="Models" t="Include">

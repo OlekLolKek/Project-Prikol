@@ -2,49 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/InputData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputAxisChange.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputAxisChange.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/CameraModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/CameraModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Storages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Storages/AxisNameStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Storages/AxisNameStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyUp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyUp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyRelease.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyRelease.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/Data.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyDown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyDown.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,27 +39,30 @@
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInitializable.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ILateExecutable.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/CameraModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputAxisChange.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Storages/AxisNameStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Storages/KeyCodeStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyRelease.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyDown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyUp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m1PgBgmx0wFuASJ2AYna74lKTs" />
@@ -134,7 +109,8 @@
       <workItem from="1608669087662" duration="4000" />
       <workItem from="1608738104889" duration="598000" />
       <workItem from="1608826679810" duration="1617000" />
-      <workItem from="1608833254527" duration="6534000" />
+      <workItem from="1608833254527" duration="6610000" />
+      <workItem from="1608910497235" duration="8410000" />
     </task>
     <servers />
   </component>
