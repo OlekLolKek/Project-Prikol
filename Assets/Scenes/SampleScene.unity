@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 113549447}
   - component: {fileID: 113549446}
   - component: {fileID: 113549444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14870
+  m_Name: pb_Mesh14914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 373455238}
   - component: {fileID: 373455237}
   - component: {fileID: 373455235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391055060}
   - component: {fileID: 391055061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,6 +660,50 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &423103075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423103077}
+  - component: {fileID: 423103076}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &423103076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423103075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359d1704079b2ec4f9053feda4b11ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: 72dccbca1d5e23e4c9ec8b44cd2f23bc, type: 2}
+--- !u!4 &423103077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423103075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.21844122, y: 3.0896428, z: 9.843609}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484321459
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484321460}
   - component: {fileID: 484321461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +808,7 @@ GameObject:
   - component: {fileID: 495427211}
   - component: {fileID: 495427210}
   - component: {fileID: 495427208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +950,7 @@ GameObject:
   - component: {fileID: 550850562}
   - component: {fileID: 550850561}
   - component: {fileID: 550850560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1705,7 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 574901178}
   - component: {fileID: 574901179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reflection Probe (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769145850}
   - component: {fileID: 769145851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1861,7 +1905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802125009}
   - component: {fileID: 802125010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,7 +1999,7 @@ GameObject:
   - component: {fileID: 825597398}
   - component: {fileID: 825597397}
   - component: {fileID: 825597395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2135,8 +2179,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 100
+  near clip plane: 0.01
+  far clip plane: 3283.73
   field of view: 70
   orthographic: 0
   orthographic size: 5
@@ -2259,7 +2303,7 @@ GameObject:
   - component: {fileID: 1165753970}
   - component: {fileID: 1165753969}
   - component: {fileID: 1165753968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8566,7 +8610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213395955}
   - component: {fileID: 1213395956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8660,7 +8704,7 @@ GameObject:
   - component: {fileID: 1249840442}
   - component: {fileID: 1249840441}
   - component: {fileID: 1249840439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8801,7 +8845,7 @@ GameObject:
   - component: {fileID: 1260668214}
   - component: {fileID: 1260668213}
   - component: {fileID: 1260668211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8942,7 +8986,7 @@ GameObject:
   - component: {fileID: 1400743521}
   - component: {fileID: 1400743520}
   - component: {fileID: 1400743519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9036,7 +9080,7 @@ GameObject:
   - component: {fileID: 1494338498}
   - component: {fileID: 1494338497}
   - component: {fileID: 1494338496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9130,7 +9174,7 @@ GameObject:
   - component: {fileID: 1500639815}
   - component: {fileID: 1500639814}
   - component: {fileID: 1500639813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9224,7 +9268,7 @@ GameObject:
   - component: {fileID: 1554268830}
   - component: {fileID: 1554268829}
   - component: {fileID: 1554268827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9365,7 +9409,7 @@ GameObject:
   - component: {fileID: 1555347079}
   - component: {fileID: 1555347078}
   - component: {fileID: 1555347077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9459,7 +9503,7 @@ GameObject:
   - component: {fileID: 1569944553}
   - component: {fileID: 1569944552}
   - component: {fileID: 1569944551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9551,7 +9595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641953980}
   - component: {fileID: 1641953981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9643,7 +9687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842096790}
   - component: {fileID: 1842096791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9707,7 +9751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874627659}
   - component: {fileID: 1874627660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9801,7 +9845,7 @@ GameObject:
   - component: {fileID: 1884261245}
   - component: {fileID: 1884261244}
   - component: {fileID: 1884261243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9889,7 +9933,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22174
+  m_Name: pb_Mesh14862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10078,7 +10122,7 @@ GameObject:
   - component: {fileID: 1965184555}
   - component: {fileID: 1965184554}
   - component: {fileID: 1965184553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TableLamp (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10172,7 +10216,7 @@ GameObject:
   - component: {fileID: 2088988378}
   - component: {fileID: 2088988377}
   - component: {fileID: 2088988380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10313,7 +10357,7 @@ GameObject:
   - component: {fileID: 2121666885}
   - component: {fileID: 2121666884}
   - component: {fileID: 2121666882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,14 +10,14 @@
         private readonly IInputAxisChange _mouseY;
         private readonly IInputKeyPress _startCrouch;
         private readonly IInputKeyRelease _endCrouch;
-        private readonly IInputKeyPress _jump;
+        private readonly IInputKeyHold _jump;
 
         #endregion
 
         public InputController(IInputAxisChange inputHorizontal, IInputAxisChange inputVertical,
             IInputAxisChange mouseX, IInputAxisChange mouseY,
             IInputKeyPress startCrouch, IInputKeyRelease endCrouch,
-            IInputKeyPress jump)
+            IInputKeyHold jump)
         {
             _horizontal = inputHorizontal;
             _vertical = inputVertical;
@@ -38,7 +38,7 @@
             
             _startCrouch.GetKeyDown();
             _endCrouch.GetKeyUp();
-            _jump.GetKeyDown();
+            _jump.GetKey();
         }
     }
 }

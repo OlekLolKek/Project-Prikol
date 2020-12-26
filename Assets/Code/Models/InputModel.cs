@@ -1,4 +1,6 @@
-﻿namespace ProjectPrikol
+﻿using UnityEngine;
+
+namespace ProjectPrikol
 {
     public class InputModel
     {
@@ -10,7 +12,7 @@
         public IInputAxisChange MouseY { get; }
         public IInputKeyPress StartCrouch { get; }
         public IInputKeyRelease StopCrouch { get; }
-        public IInputKeyPress Jump { get; }
+        public IInputKeyHold Jump { get; }
 
         #endregion
 
@@ -23,7 +25,7 @@
             MouseY = new PCInputAxis(AxisNameStorage.MOUSE_Y);
             StartCrouch = new PCInputKeyDown(inputData.Crouch);
             StopCrouch = new PCInputKeyUp(inputData.Crouch);
-            Jump = new PCInputKeyDown(inputData.Jump);
+            Jump = new PCInputKeyHold(inputData.Jump);
         }
     }
 }

@@ -7,8 +7,8 @@ namespace ProjectPrikol
     {
         [SerializeField] private string _cameraName;
         [SerializeField, Range(1, 179)] private float _fov;
-        [SerializeField] private float _clippingPlaneFar;
-        [SerializeField] private float _clippingPlaneNear;
+        [SerializeField, Range(0.01f, 5000)] private float _clippingPlaneFar;
+        [SerializeField, Range(0.01f, 5000)] private float _clippingPlaneNear;
 
         public string CameraName => _cameraName;
         public float FOV => _fov;

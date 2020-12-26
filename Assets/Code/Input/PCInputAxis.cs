@@ -5,8 +5,8 @@ namespace ProjectPrikol
 {
     public class PCInputAxis : IInputAxisChange
     {
-        public event Action<float> OnAxisChanged;
-        public string _axis;
+        public event Action<float> OnAxisChanged = delegate(float f) {  };
+        private readonly string _axis;
 
         public PCInputAxis(string axis)
         {
