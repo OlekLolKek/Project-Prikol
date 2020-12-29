@@ -5,21 +5,33 @@ namespace ProjectPrikol
     [CreateAssetMenu(fileName = "PlayerData", menuName = "Data/PlayerData")]
     public class PlayerData : ScriptableObject, IData
     {
+        [SerializeField] private LayerMask _groundLayerMask;
+        [SerializeField] private Material _playerMaterial;
         [SerializeField] private Vector3 _playerScale;
+        [SerializeField] private Vector3 _crouchScale;
         [SerializeField] private Vector3 _headPosition;
         [SerializeField] private Mesh _playerMesh;
+        [SerializeField] private string _playerName;
         [SerializeField] private string _orientationName;
         [SerializeField] private string _headName;
         [SerializeField] private float _speed;
+        [SerializeField] private float _slideForce;
+        [SerializeField] private float _jumpForce;
         [SerializeField] private float _mass;
 
-        public Vector3 PlayerScale => _playerScale;
-        public Vector3 HeadPosition => _headPosition;
 
+        public LayerMask GroundLayerMask => _groundLayerMask;
+        public Material PlayerMaterial => _playerMaterial;
+        public Vector3 PlayerScale => _playerScale;
+        public Vector3 CrouchScale => _crouchScale;
+        public Vector3 HeadPosition => _headPosition;
         public Mesh PlayerMesh => _playerMesh;
+        public string PlayerName => _playerName;
         public string OrientationName => _orientationName;
         public string HeadName => _headName;
         public float Speed => _speed;
+        public float SlideForce => _slideForce;
+        public float JumpForce => _jumpForce;
         public float Mass => _mass;
     }
 }

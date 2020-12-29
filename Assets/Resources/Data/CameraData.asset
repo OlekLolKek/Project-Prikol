@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3588d8c9ac42469838be3556409e2f, type: 3}
   m_Name: CameraData
   m_EditorClassIdentifier: 
+  _postProcessingLayer:
+    serializedVersion: 2
+    m_Bits: 512
   _cameraName: Camera
   _fov: 75
   _clippingPlaneFar: 100

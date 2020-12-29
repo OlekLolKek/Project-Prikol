@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+
 
 namespace ProjectPrikol
 {
@@ -24,7 +26,13 @@ namespace ProjectPrikol
 
             CameraTransform = Camera.transform;
             
-            Camera.gameObject.AddComponent<AudioListener>();
+            camera.AddComponent<AudioListener>();
+
+            //TODO: Fix NullReferenceException
+            // var postProcessing = camera.AddComponent<PostProcessLayer>();
+            // postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
+            // postProcessing.volumeLayer = _cameraData.PostProcessingLayer;
+            // postProcessing.volumeTrigger = camera.transform;
 
             return Camera.gameObject;
         }
