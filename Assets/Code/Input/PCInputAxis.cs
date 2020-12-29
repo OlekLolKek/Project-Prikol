@@ -15,7 +15,7 @@ namespace ProjectPrikol
 
         public void GetAxis()
         {
-            OnAxisChanged.Invoke(Input.GetAxis(_axis));
+            OnAxisChanged.Invoke(Input.GetAxisRaw(_axis));
         }
     }
 }

@@ -33,7 +33,7 @@ namespace ProjectPrikol
         private readonly float _slideCounterMovement = 0.2f;
         private readonly float _crouchHeight = 0.5f;
         private readonly float _crouchBoostSpeed = 0.5f;
-        private readonly float _extraGravity = 10.0f;
+        private readonly float _extraGravity = 300.0f;
         private readonly float _staticGravity = 3000;
         private readonly float _stopGroundedDelay = 3.0f;
         private readonly float _playerMass;
@@ -160,8 +160,8 @@ namespace ProjectPrikol
             _rigidbody.AddForce(_transform.right * (_horizontal * _moveSpeed * _deltaTime * multiplier));
             
             //Debug.Log(_isGrounded);
-            //Debug.Log($"{_vertical} * {_moveSpeed} * {_deltaTime} * {multiplier} * {multiplierForward} * {_playerMass} = " +
-            //          $"{_vertical * _moveSpeed * _deltaTime * multiplier * multiplierForward * _playerMass}");
+            Debug.Log($"{_vertical} * {_moveSpeed} * {_deltaTime} * {multiplier} * {multiplierForward} * {_playerMass} = " +
+                      $"{_vertical * _moveSpeed * _deltaTime * multiplier * multiplierForward * _playerMass}");
         }
         
         private void CounterMovement(float x, float y, Vector2 magnitude, float deltaTime)
@@ -282,8 +282,6 @@ namespace ProjectPrikol
                 _isCancellingGrounded = true;
                 _stopGroundedInvoke = StopGrounded(_deltaTime * _stopGroundedDelay).ToObservable().Subscribe();
             }
-            
-            Debug.Log(_isGrounded);
         }
 
         private void HorizontalAxisChanged(float value)

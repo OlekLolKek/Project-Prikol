@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b365a9adbfe42f9b49cdcc252a919fa, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
+  _groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   _playerMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   _playerScale: {x: 1, y: 1.5, z: 1}
-  _crouchScale: {x: 0, y: 0, z: 0}
+  _crouchScale: {x: 1, y: 0.5, z: 1}
   _headPosition: {x: 0, y: 0.5, z: 0}
   _playerMesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   _playerName: Player
   _orientationName: Orientation
   _headName: Head
-  _speed: 1000
-  _slideForce: 0
-  _jumpForce: 0
-  _mass: 70
+  _speed: 4500
+  _slideForce: 400
+  _jumpForce: 450
+  _mass: 1.5
