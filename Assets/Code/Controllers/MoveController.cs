@@ -158,10 +158,6 @@ namespace ProjectPrikol
             
             _rigidbody.AddForce(_transform.forward * (_vertical * _moveSpeed * _deltaTime * multiplier * multiplierForward));
             _rigidbody.AddForce(_transform.right * (_horizontal * _moveSpeed * _deltaTime * multiplier));
-            
-            //Debug.Log(_isGrounded);
-            Debug.Log($"{_vertical} * {_moveSpeed} * {_deltaTime} * {multiplier} * {multiplierForward} * {_playerMass} = " +
-                      $"{_vertical * _moveSpeed * _deltaTime * multiplier * multiplierForward * _playerMass}");
         }
         
         private void CounterMovement(float x, float y, Vector2 magnitude, float deltaTime)
@@ -231,11 +227,6 @@ namespace ProjectPrikol
             yield return new WaitForSeconds(_jumpCooldown);
             _isReadyToJump = true;
         }
-
-        // private void Look()
-        // {
-        //     var mouseX = _mouseX
-        // }
 
         private Vector2 FindVelocityRelativeToLook()
         {

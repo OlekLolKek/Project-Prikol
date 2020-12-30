@@ -27,9 +27,11 @@ namespace ProjectPrikol
             CameraTransform = Camera.transform;
             
             camera.AddComponent<AudioListener>();
-
+            
             //TODO: Fix NullReferenceException
+            
             // var postProcessing = camera.AddComponent<PostProcessLayer>();
+            // postProcessing = _cameraData.PostProcessLayerComponent;
             // postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
             // postProcessing.volumeLayer = _cameraData.PostProcessingLayer;
             // postProcessing.volumeTrigger = camera.transform;

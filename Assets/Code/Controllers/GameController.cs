@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 namespace ProjectPrikol
@@ -25,8 +24,12 @@ namespace ProjectPrikol
                 inputModel.MouseX, inputModel.MouseY, 
                 inputModel.StartCrouch, inputModel.StopCrouch,
                 inputModel.Jump);
-            var moveController = new MoveController(playerModel, _data.PlayerData, inputModel);
-            var cameraController = new CameraController(cameraModel, playerModel);
+            
+            var moveController = new MoveController(playerModel, _data.PlayerData, 
+                inputModel);
+            
+            var cameraController = new CameraController(cameraModel, _data.CameraData, 
+                playerModel, inputModel);
 
             _controllers.Add(inputController);
             _controllers.Add(moveController);
