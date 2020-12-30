@@ -19,5 +19,5 @@ MonoBehaviour:
   _fov: 75
   _clippingPlaneFar: 100
   _clippingPlaneNear: 0.03
-  _sensitivity: 100
+  _sensitivity: 125
   _sensitivityMultiplier: 1

@@ -15,7 +15,6 @@ namespace ProjectPrikol
         private readonly float _sensitivityMultiplier;
         
         private float _xRotation;
-        private float _desiredX;
         private float _mouseX;
         private float _mouseY;
 
@@ -54,13 +53,13 @@ namespace ProjectPrikol
             var mouseY = _mouseY * _sensitivity * _sensitivityMultiplier * deltaTime;
 
             var rotation = _cameraTransform.localRotation.eulerAngles;
-            _desiredX = rotation.y + _mouseX;
+            var desiredX = rotation.y + mouseX;
 
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, _minXRotation, _maxXRotation);
             
-            _cameraTransform.localRotation = Quaternion.Euler(_xRotation, _desiredX, 0.0f);
-            _playerTransform.localRotation = Quaternion.Euler(0.0f, _desiredX, 0.0f);
+            _cameraTransform.localRotation = Quaternion.Euler(_xRotation, desiredX, 0.0f);
+            _playerTransform.localRotation = Quaternion.Euler(0.0f, desiredX, 0.0f);
         }
 
         private void ChangeMouseX(float value)

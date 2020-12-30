@@ -10,7 +10,6 @@ namespace ProjectPrikol
         
         public Rigidbody Rigidbody { get; private set; }
         public Transform Transform { get; private set; }
-        public Transform Orientation { get; private set; }
         public Transform Head { get; private set; }
         
         public PlayerView PlayerView { get; private set; }
@@ -34,10 +33,6 @@ namespace ProjectPrikol
             Rigidbody.mass = _playerData.Mass;
             Rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
-            Orientation = new GameObject(_playerData.OrientationName).transform;
-            Orientation.parent = player.transform;
-            Orientation.localPosition = Vector3.zero;
 
             Head = new GameObject(_playerData.HeadName).transform;
             Head.parent = player.transform;

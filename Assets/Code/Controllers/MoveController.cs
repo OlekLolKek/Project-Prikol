@@ -12,9 +12,7 @@ namespace ProjectPrikol
         //TODO: divide this controller into separate Move, Crouch, Jump etc controllers
         #region Fields
 
-        private readonly PlayerView _playerView;
         private readonly LayerMask _groundLayer;
-        private readonly Transform _orientation;
         private readonly Transform _transform;
         private readonly Rigidbody _rigidbody;
         private readonly Vector3 _crouchScale;
@@ -37,6 +35,9 @@ namespace ProjectPrikol
         private readonly float _staticGravity = 3000;
         private readonly float _stopGroundedDelay = 3.0f;
         private readonly float _playerMass;
+        private readonly float _jumpUpMultiplier = 1.5f;
+        private readonly float _jumpNormalMultiplier = 0.5f;
+        private readonly float _fallStopThreshold = 0.5f;
         private float _deltaTime;
 
         private Vector3 _normalVector = Vector3.up;
@@ -46,7 +47,7 @@ namespace ProjectPrikol
         private float _horizontal;
         private float _vertical;
         private float _desiredX;
-        private bool _isJumping;
+        private bool _isPressingJumpButton;
         private bool _sprinting;
         private bool _isCrouching;
         private bool _isReadyToJump = true;
@@ -69,11 +70,10 @@ namespace ProjectPrikol
             InputModel inputModel)
         {
             _rigidbody = playerModel.Rigidbody;
-            _orientation = playerModel.Orientation;
             _transform = playerModel.Transform;
-            _playerView = playerModel.PlayerView;
-
-            _playerView.OnCollisionStayEvent += PlayerCollision;
+            
+            var playerView = playerModel.PlayerView;
+            playerView.OnCollisionStayEvent += PlayerCollision;
 
             _playerScale = playerData.PlayerScale;
             _transform.localScale = _playerScale;
@@ -95,17 +95,12 @@ namespace ProjectPrikol
             _startCrouch.OnKeyPressed += StartCrouch;
             _stopCrouch.OnKeyReleased += StopCrouch;
             _jump.OnKeyHeld += IsJumpButtonHeld;
-            
-            //TODO: move to CursorController
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
         
         public void Execute(float deltaTime)
         {
-            Move();
             _deltaTime = deltaTime;
-            //Look();
+            Move();
         }
 
         private void Move()
@@ -118,7 +113,7 @@ namespace ProjectPrikol
 
             CounterMovement(_horizontal, _vertical, magnitude, _deltaTime);
 
-            if (_isReadyToJump && _isJumping)
+            if (_isReadyToJump && _isPressingJumpButton)
             {
                 Jump();
             }
@@ -130,20 +125,17 @@ namespace ProjectPrikol
                 _rigidbody.AddForce(Vector3.down * (_deltaTime * _staticGravity));
                 return;
             }
-
             
-            //TODO: replace 2nd and 4th `if`s with `else if`
             if (_horizontal > 0.0f && magnitudeX > maxSpeed)
                 _horizontal = 0.0f;
-            if (_horizontal < 0.0f && magnitudeX < -maxSpeed)
+            else if (_horizontal < 0.0f && magnitudeX < -maxSpeed)
                 _horizontal = 0.0f;
             
             if (_vertical > 0.0f && magnitudeY > maxSpeed)
                 _vertical = 0.0f;
-            if (_vertical < 0.0f && magnitudeY < -maxSpeed)
+            else if (_vertical < 0.0f && magnitudeY < -maxSpeed)
                 _vertical = 0.0f;
-
-            //TODO: replace with fields
+            
             var multiplier = 1.0f;
             var multiplierForward = 1.0f;
 
@@ -164,7 +156,7 @@ namespace ProjectPrikol
         {
             if (!_isGrounded)
                 return;
-            if (_isJumping)
+            if (_isPressingJumpButton)
                 return;
 
             if (_isCrouching)
@@ -203,20 +195,8 @@ namespace ProjectPrikol
             if (_isGrounded && _isReadyToJump)
             {
                 _isReadyToJump = false;
-                
-                //TODO: create fields instead of the numbers (all the numbers below)
-                _rigidbody.AddForce(Vector2.up * (_jumpForce * 1.5f));
-                _rigidbody.AddForce(_normalVector * (_jumpForce * 0.5f));
-
-                var velocity = _rigidbody.velocity;
-                if (_rigidbody.velocity.y < 0.5f)
-                {
-                    _rigidbody.velocity = new Vector3(velocity.x, 0.0f, velocity.z);
-                }
-                else if (_rigidbody.velocity.y > 0)
-                {
-                    _rigidbody.velocity = new Vector3(velocity.x, velocity.y / 2.0f, velocity.z);
-                }
+                _rigidbody.AddForce(Vector2.up * (_jumpForce * _jumpUpMultiplier));
+                _rigidbody.AddForce(_normalVector * (_jumpForce * _jumpNormalMultiplier));
 
                 ResetJump().ToObservable().Subscribe();
             }
@@ -255,7 +235,7 @@ namespace ProjectPrikol
 
             //TODO: what is this
             if (_groundLayer != (_groundLayer | (1 << layer))) return;
-            
+
             for (int i = 0; i < other.contactCount; i++)
             {
                 var normal = other.contacts[i].normal;
@@ -296,7 +276,6 @@ namespace ProjectPrikol
             {
                 if (_rigidbody.velocity.magnitude > _crouchBoostSpeed)
                 {
-                    //TODO: check if I need to replace _transform with _orientation
                     _rigidbody.AddForce(_transform.forward * _slideForce);
                 }
             }
@@ -321,11 +300,11 @@ namespace ProjectPrikol
         {
             if (isButtonPressed)
             {
-                _isJumping = true;
+                _isPressingJumpButton = true;
             }
             else
             {
-                _isJumping = false;
+                _isPressingJumpButton = false;
             }
         }
 

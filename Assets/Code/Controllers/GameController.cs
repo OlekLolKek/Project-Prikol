@@ -31,9 +31,12 @@ namespace ProjectPrikol
             var cameraController = new CameraController(cameraModel, _data.CameraData, 
                 playerModel, inputModel);
 
+            var cursorController = new CursorController();
+
             _controllers.Add(inputController);
             _controllers.Add(moveController);
             _controllers.Add(cameraController);
+            _controllers.Add(cursorController);
             
             _controllers.Initialize();
         }
