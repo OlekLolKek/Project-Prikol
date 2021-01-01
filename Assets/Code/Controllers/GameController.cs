@@ -25,8 +25,8 @@ namespace ProjectPrikol
                 inputModel.StartCrouch, inputModel.StopCrouch,
                 inputModel.Jump);
             
-            var moveController = new MoveController(playerModel, _data.PlayerData, 
-                inputModel);
+            var playerController = new PlayerController(playerModel, inputModel, 
+                _data.PlayerData);
             
             var cameraController = new CameraController(cameraModel, _data.CameraData, 
                 playerModel, inputModel);
@@ -34,10 +34,10 @@ namespace ProjectPrikol
             var cursorController = new CursorController();
 
             _controllers.Add(inputController);
-            _controllers.Add(moveController);
+            _controllers.Add(playerController);
             _controllers.Add(cameraController);
             _controllers.Add(cursorController);
-            
+
             _controllers.Initialize();
         }
 

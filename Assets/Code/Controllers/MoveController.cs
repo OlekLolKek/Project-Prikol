@@ -12,6 +12,7 @@ namespace ProjectPrikol
         //TODO: divide this controller into separate Move, Crouch, Jump etc controllers
         #region Fields
 
+        private readonly PlayerView _playerView;
         private readonly LayerMask _groundLayer;
         private readonly Transform _transform;
         private readonly Rigidbody _rigidbody;
@@ -28,16 +29,13 @@ namespace ProjectPrikol
         private readonly float _axisThreshold = 0.05f;
         private readonly float _maxSlopeAngle = 35.0f;
         private readonly float _slideForce;
-        private readonly float _slideCounterMovement = 0.2f;
-        private readonly float _crouchHeight = 0.5f;
+        private readonly float _crouchHeight = 0.6f;
         private readonly float _crouchBoostSpeed = 0.5f;
         private readonly float _extraGravity = 300.0f;
-        private readonly float _staticGravity = 3000;
+        private readonly float _crouchingGravity = 3000;
         private readonly float _stopGroundedDelay = 3.0f;
-        private readonly float _playerMass;
         private readonly float _jumpUpMultiplier = 1.5f;
         private readonly float _jumpNormalMultiplier = 0.5f;
-        private readonly float _fallStopThreshold = 0.5f;
         private float _deltaTime;
 
         private Vector3 _normalVector = Vector3.up;
@@ -72,13 +70,12 @@ namespace ProjectPrikol
             _rigidbody = playerModel.Rigidbody;
             _transform = playerModel.Transform;
             
-            var playerView = playerModel.PlayerView;
-            playerView.OnCollisionStayEvent += PlayerCollision;
+            _playerView = playerModel.PlayerView;
+            _playerView.OnCollisionStayEvent += PlayerCollision;
 
             _playerScale = playerData.PlayerScale;
             _transform.localScale = _playerScale;
             _crouchScale = playerData.CrouchScale;
-            _playerMass = playerData.Mass;
             _groundLayer = playerData.GroundLayerMask;
             
             _moveSpeed = playerData.Speed;
@@ -108,34 +105,20 @@ namespace ProjectPrikol
             _rigidbody.AddForce(Vector3.down * (_deltaTime * _extraGravity));
             
             var magnitude = FindVelocityRelativeToLook();
-            var magnitudeX = magnitude.x;
-            var magnitudeY = magnitude.y;
 
             CounterMovement(_horizontal, _vertical, magnitude, _deltaTime);
 
             if (_isReadyToJump && _isPressingJumpButton)
             {
-                Jump();
+                //Jump();
             }
-
-            var maxSpeed = _maxSpeed;
 
             if (_isCrouching && _isGrounded && _isReadyToJump)
             {
-                _rigidbody.AddForce(Vector3.down * (_deltaTime * _staticGravity));
+                _rigidbody.AddForce(Vector3.down * (_deltaTime * _crouchingGravity));
                 return;
             }
-            
-            if (_horizontal > 0.0f && magnitudeX > maxSpeed)
-                _horizontal = 0.0f;
-            else if (_horizontal < 0.0f && magnitudeX < -maxSpeed)
-                _horizontal = 0.0f;
-            
-            if (_vertical > 0.0f && magnitudeY > maxSpeed)
-                _vertical = 0.0f;
-            else if (_vertical < 0.0f && magnitudeY < -maxSpeed)
-                _vertical = 0.0f;
-            
+
             var multiplier = 1.0f;
             var multiplierForward = 1.0f;
 
@@ -144,9 +127,6 @@ namespace ProjectPrikol
                 multiplier = 0.5f;
                 multiplierForward = 0.5f;
             }
-
-            if (_isGrounded && _isCrouching) 
-                multiplierForward = 0.0f;
             
             _rigidbody.AddForce(_transform.forward * (_vertical * _moveSpeed * _deltaTime * multiplier * multiplierForward));
             _rigidbody.AddForce(_transform.right * (_horizontal * _moveSpeed * _deltaTime * multiplier));
@@ -158,14 +138,7 @@ namespace ProjectPrikol
                 return;
             if (_isPressingJumpButton)
                 return;
-
-            if (_isCrouching)
-            {
-                _rigidbody.AddForce(-_rigidbody.velocity.normalized * 
-                                    (_moveSpeed * deltaTime * _slideCounterMovement));
-                return;
-            }
-
+            
             if (Math.Abs(magnitude.x) > _counterMovementThreshold && Math.Abs(x) < _axisThreshold ||
                 (magnitude.x < -_counterMovementThreshold && x > 0) ||
                 magnitude.x > _counterMovementThreshold && x < 0)
@@ -315,6 +288,7 @@ namespace ProjectPrikol
             _startCrouch.OnKeyPressed -= StartCrouch;
             _stopCrouch.OnKeyReleased -= StopCrouch;
             _jump.OnKeyHeld -= IsJumpButtonHeld;
+            _playerView.OnCollisionStayEvent -= PlayerCollision;
         }
     }
 }

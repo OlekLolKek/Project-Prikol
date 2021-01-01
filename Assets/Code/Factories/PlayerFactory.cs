@@ -33,6 +33,7 @@ namespace ProjectPrikol
             Rigidbody.mass = _playerData.Mass;
             Rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            Rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 
             Head = new GameObject(_playerData.HeadName).transform;
             Head.parent = player.transform;
