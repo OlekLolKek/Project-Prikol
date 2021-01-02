@@ -12,8 +12,7 @@ namespace ProjectPrikol
         //TODO: divide this controller into separate Move, Crouch, Jump etc controllers
         #region Fields
 
-        private readonly PlayerView _playerView;
-        private readonly LayerMask _groundLayer;
+        private readonly PlayerCollisionModel _playerCollisionModel;
         private readonly Transform _transform;
         private readonly Rigidbody _rigidbody;
         private readonly Vector3 _crouchScale;
@@ -22,25 +21,16 @@ namespace ProjectPrikol
         private readonly float _sensitivity;
         private readonly float _moveSpeed;
         private readonly float _maxSpeed = 20.0f;
-        private readonly float _jumpCooldown = 0.25f;
-        private readonly float _jumpForce;
         private readonly float _counterMovement = 0.175f;
         private readonly float _counterMovementThreshold = 0.01f;
         private readonly float _axisThreshold = 0.05f;
-        private readonly float _maxSlopeAngle = 35.0f;
         private readonly float _slideForce;
         private readonly float _crouchHeight = 0.6f;
         private readonly float _crouchBoostSpeed = 0.5f;
         private readonly float _extraGravity = 300.0f;
         private readonly float _crouchingGravity = 3000;
-        private readonly float _stopGroundedDelay = 3.0f;
-        private readonly float _jumpUpMultiplier = 1.5f;
-        private readonly float _jumpNormalMultiplier = 0.5f;
         private float _deltaTime;
 
-        private Vector3 _normalVector = Vector3.up;
-        private Vector3 _wallNormalVector;
-        
         private float _xRotation;
         private float _horizontal;
         private float _vertical;
@@ -65,23 +55,18 @@ namespace ProjectPrikol
         
         
         public MoveController(PlayerModel playerModel, PlayerData playerData, 
-            InputModel inputModel)
+            InputModel inputModel, PlayerCollisionModel collisionModel)
         {
             _rigidbody = playerModel.Rigidbody;
             _transform = playerModel.Transform;
-            
-            _playerView = playerModel.PlayerView;
-            _playerView.OnCollisionStayEvent += PlayerCollision;
 
             _playerScale = playerData.PlayerScale;
             _transform.localScale = _playerScale;
             _crouchScale = playerData.CrouchScale;
-            _groundLayer = playerData.GroundLayerMask;
-            
+
             _moveSpeed = playerData.Speed;
             _slideForce = playerData.SlideForce;
-            _jumpForce = playerData.JumpForce;
-            
+
             _horizontalAxis = inputModel.Horizontal;
             _verticalAxis = inputModel.Vertical;
             _startCrouch = inputModel.StartCrouch;
@@ -92,12 +77,20 @@ namespace ProjectPrikol
             _startCrouch.OnKeyPressed += StartCrouch;
             _stopCrouch.OnKeyReleased += StopCrouch;
             _jump.OnKeyHeld += IsJumpButtonHeld;
+
+            _playerCollisionModel = collisionModel;
         }
         
         public void Execute(float deltaTime)
         {
             _deltaTime = deltaTime;
+            GetValues();
             Move();
+        }
+
+        private void GetValues()
+        {
+            _isGrounded = _playerCollisionModel.IsGrounded;
         }
 
         private void Move()
@@ -107,11 +100,6 @@ namespace ProjectPrikol
             var magnitude = FindVelocityRelativeToLook();
 
             CounterMovement(_horizontal, _vertical, magnitude, _deltaTime);
-
-            if (_isReadyToJump && _isPressingJumpButton)
-            {
-                //Jump();
-            }
 
             if (_isCrouching && _isGrounded && _isReadyToJump)
             {
@@ -163,24 +151,6 @@ namespace ProjectPrikol
             }
         }
 
-        private void Jump()
-        {
-            if (_isGrounded && _isReadyToJump)
-            {
-                _isReadyToJump = false;
-                _rigidbody.AddForce(Vector2.up * (_jumpForce * _jumpUpMultiplier));
-                _rigidbody.AddForce(_normalVector * (_jumpForce * _jumpNormalMultiplier));
-
-                ResetJump().ToObservable().Subscribe();
-            }
-        }
-
-        private IEnumerator ResetJump()
-        {
-            yield return new WaitForSeconds(_jumpCooldown);
-            _isReadyToJump = true;
-        }
-
         private Vector2 FindVelocityRelativeToLook()
         {
             var lookAngle = _transform.eulerAngles.y;
@@ -194,38 +164,6 @@ namespace ProjectPrikol
             var magnitudeX = magnitude * Mathf.Cos(deltaAngleX * Mathf.Deg2Rad);
 
             return new Vector2(magnitudeX, magnitudeY);
-        }
-
-        private bool IsFloor(Vector3 normal)
-        {
-            var angle = Vector3.Angle(Vector3.up, normal);
-            return angle < _maxSlopeAngle;
-        }
-
-        private void PlayerCollision(Collision other)
-        {
-            int layer = other.gameObject.layer;
-
-            //TODO: what is this
-            if (_groundLayer != (_groundLayer | (1 << layer))) return;
-
-            for (int i = 0; i < other.contactCount; i++)
-            {
-                var normal = other.contacts[i].normal;
-                if (IsFloor(normal))
-                {
-                    _isGrounded = true;
-                    _isCancellingGrounded = false;
-                    _normalVector = normal;
-                    _stopGroundedInvoke?.Dispose();
-                }
-            }
-
-            if (!_isCancellingGrounded)
-            {
-                _isCancellingGrounded = true;
-                _stopGroundedInvoke = StopGrounded(_deltaTime * _stopGroundedDelay).ToObservable().Subscribe();
-            }
         }
 
         private void HorizontalAxisChanged(float value)
@@ -252,12 +190,6 @@ namespace ProjectPrikol
                     _rigidbody.AddForce(_transform.forward * _slideForce);
                 }
             }
-        }
-
-        private IEnumerator StopGrounded(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            _isGrounded = false;
         }
 
         private void StopCrouch()
@@ -288,7 +220,6 @@ namespace ProjectPrikol
             _startCrouch.OnKeyPressed -= StartCrouch;
             _stopCrouch.OnKeyReleased -= StopCrouch;
             _jump.OnKeyHeld -= IsJumpButtonHeld;
-            _playerView.OnCollisionStayEvent -= PlayerCollision;
         }
     }
 }

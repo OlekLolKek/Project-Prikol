@@ -10,9 +10,7 @@ namespace ProjectPrikol
         #region Fields
 
         private readonly PlayerCollisionModel _playerCollisionModel;
-        private readonly PlayerView _playerView;
         private readonly LayerMask _groundLayer;
-        private readonly Transform _transform;
         private readonly Rigidbody _rigidbody;
         private readonly IInputKeyHold _jump;
 
@@ -33,9 +31,6 @@ namespace ProjectPrikol
             InputModel inputModel, PlayerCollisionModel collisionModel)
         {
             _rigidbody = playerModel.Rigidbody;
-            _transform = playerModel.Transform;
-            
-            _playerView = playerModel.PlayerView;
 
             _jumpForce = playerData.JumpForce;
 

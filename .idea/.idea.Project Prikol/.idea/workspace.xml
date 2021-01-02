@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +69,12 @@
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollision.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionDetector.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m1PgBgmx0wFuASJ2AYna74lKTs" />
@@ -142,7 +133,8 @@
       <workItem from="1609329148521" duration="577000" />
       <workItem from="1609329863770" duration="11937000" />
       <workItem from="1609427783787" duration="9762000" />
-      <workItem from="1609511605917" duration="8532000" />
+      <workItem from="1609511605917" duration="8724000" />
+      <workItem from="1609598418126" duration="5086000" />
     </task>
     <servers />
   </component>
