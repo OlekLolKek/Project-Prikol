@@ -9,15 +9,18 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Controllers" t="Include">
-            <e p="CameraController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
             <e p="CursorController.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
-            <e p="JumpController.cs" t="Include" />
-            <e p="MoveController.cs" t="Include" />
-            <e p="PlayerCollisionController.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="CameraController.cs" t="Include" />
+              <e p="CrouchController.cs" t="Include" />
+              <e p="JumpController.cs" t="Include" />
+              <e p="MoveController.cs" t="Include" />
+              <e p="PlayerCollisionController.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+            </e>
           </e>
           <e p="Data" t="Include">
             <e p="CameraData.cs" t="Include" />
@@ -53,7 +56,8 @@
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />
             <e p="InputModel.cs" t="Include" />
-            <e p="PlayerCollisionModel.cs" t="Include" />
+            <e p="PlayerCrouchModel.cs" t="Include" />
+            <e p="PlayerJumpModel.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />
           </e>
           <e p="Storages" t="Include">

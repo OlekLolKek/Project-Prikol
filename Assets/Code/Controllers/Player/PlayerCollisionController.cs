@@ -8,7 +8,7 @@ namespace ProjectPrikol
 {
     public class PlayerCollisionController : IExecutable, ICleanable
     {
-        private readonly PlayerCollisionModel _collisionModel;
+        private readonly PlayerJumpModel _jumpModel;
         private readonly PlayerView _playerView;
         private readonly LayerMask _groundLayer;
         private readonly float _maxSlopeAngle = 35.0f;
@@ -19,10 +19,10 @@ namespace ProjectPrikol
         private bool _isCancellingGrounded;
         
 
-        public PlayerCollisionController(PlayerModel playerModel, PlayerCollisionModel collisionModel,
+        public PlayerCollisionController(PlayerModel playerModel, PlayerJumpModel jumpModel,
             PlayerData playerData)
         {
-            _collisionModel = collisionModel;
+            _jumpModel = jumpModel;
             _playerView = playerModel.PlayerView;
             _groundLayer = playerData.GroundLayerMask;
             _playerView.OnCollisionStayEvent += PlayerCollision;
@@ -44,9 +44,9 @@ namespace ProjectPrikol
                 var normal = other.contacts[i].normal;
                 if (IsFloor(normal))
                 {
-                    _collisionModel.IsGrounded = true;
+                    _jumpModel.IsGrounded = true;
                     _isCancellingGrounded = false;
-                    _collisionModel.NormalVector = normal;
+                    _jumpModel.NormalVector = normal;
                     _stopGroundedInvoke?.Dispose();
                 }
             }
@@ -61,7 +61,7 @@ namespace ProjectPrikol
         private IEnumerator StopGrounded(float delay)
         {
             yield return new WaitForSeconds(delay);
-            _collisionModel.IsGrounded = false;
+            _jumpModel.IsGrounded = false;
         }
         
         private bool IsFloor(Vector3 normal)

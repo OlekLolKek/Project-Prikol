@@ -9,7 +9,7 @@ namespace ProjectPrikol
     {
         #region Fields
 
-        private readonly PlayerCollisionModel _playerCollisionModel;
+        private readonly PlayerJumpModel _playerJumpModel;
         private readonly LayerMask _groundLayer;
         private readonly Rigidbody _rigidbody;
         private readonly IInputKeyHold _jump;
@@ -21,20 +21,19 @@ namespace ProjectPrikol
         
         private Vector3 _normalVector = Vector3.up;
         
-        private bool _isPressingJumpButton;
         private bool _isReadyToJump = true;
         private bool _isGrounded;
 
         #endregion
 
         public JumpController(PlayerModel playerModel, PlayerData playerData,
-            InputModel inputModel, PlayerCollisionModel collisionModel)
+            InputModel inputModel, PlayerJumpModel jumpModel)
         {
             _rigidbody = playerModel.Rigidbody;
 
             _jumpForce = playerData.JumpForce;
 
-            _playerCollisionModel = collisionModel;
+            _playerJumpModel = jumpModel;
             
             _jump = inputModel.Jump;
             _jump.OnKeyHeld += IsJumpButtonHeld;
@@ -48,20 +47,20 @@ namespace ProjectPrikol
 
         private void Jump()
         {
-            if (_isReadyToJump && _isPressingJumpButton && _isGrounded)
-            {
-                _isReadyToJump = false;
-                _rigidbody.AddForce(Vector2.up * (_jumpForce * _jumpUpMultiplier));
-                _rigidbody.AddForce(_normalVector * (_jumpForce * _jumpNormalMultiplier));
+            if (!_isReadyToJump || !_playerJumpModel.IsPressingJumpButton || !_isGrounded) 
+                return;
+            
+            _isReadyToJump = false;
+            _rigidbody.AddForce(Vector2.up * (_jumpForce * _jumpUpMultiplier));
+            _rigidbody.AddForce(_normalVector * (_jumpForce * _jumpNormalMultiplier));
 
-                ResetJump().ToObservable().Subscribe();
-            }
+            ResetJump().ToObservable().Subscribe();
         }
 
         private void GetValues()
         {
-            _isGrounded = _playerCollisionModel.IsGrounded;
-            _normalVector = _playerCollisionModel.NormalVector;
+            _isGrounded = _playerJumpModel.IsGrounded;
+            _normalVector = _playerJumpModel.NormalVector;
         }
 
         private IEnumerator ResetJump()
@@ -74,11 +73,11 @@ namespace ProjectPrikol
         {
             if (isButtonPressed)
             {
-                _isPressingJumpButton = true;
+                _playerJumpModel.IsPressingJumpButton = true;
             }
             else
             {
-                _isPressingJumpButton = false;
+                _playerJumpModel.IsPressingJumpButton = false;
             }
         }
 
