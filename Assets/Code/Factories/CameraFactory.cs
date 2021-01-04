@@ -27,13 +27,12 @@ namespace ProjectPrikol
             CameraTransform = Camera.transform;
             
             camera.AddComponent<AudioListener>();
-            
-            //TODO: Fix NullReferenceException
-            
-            // var postProcessing = camera.AddComponent<PostProcessLayer>();
-            // postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
-            // postProcessing.volumeLayer = _cameraData.PostProcessingLayer;
-            // postProcessing.volumeTrigger = camera.transform;
+
+            var postProcessing = camera.AddComponent<PostProcessLayer>();
+            postProcessing.Init(_cameraData.PostProcessResources);
+            postProcessing.volumeTrigger = camera.transform;
+            postProcessing.volumeLayer = _cameraData.PostProcessingLayer;
+            postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
 
             return Camera.gameObject;
         }

@@ -26,13 +26,13 @@ namespace ProjectPrikol
         private readonly float _axisThreshold = 0.05f;
         private readonly float _extraGravity = 300.0f;
         private readonly float _crouchingGravity = 3000;
-        private float _deltaTime;
         
+        private float _deltaTime;
         private float _horizontal;
         private float _vertical;
         private bool _isPressingJumpButton;
-        private bool _isCrouching;
         private bool _isReadyToJump = true;
+        private bool _isCrouching;
         private bool _isGrounded;
 
         private readonly IInputAxisChange _horizontalAxis;
@@ -83,7 +83,7 @@ namespace ProjectPrikol
             
             var magnitude = FindVelocityRelativeToLook();
 
-            CounterMovement(_horizontal, _vertical, magnitude, _deltaTime);
+            CounterMovement(magnitude, _deltaTime);
 
             if (_isCrouching && _isGrounded && _isReadyToJump)
             {
@@ -91,6 +91,8 @@ namespace ProjectPrikol
                 return;
             }
 
+            //TODO: create fields
+            
             var multiplier = 1.0f;
             var multiplierForward = 1.0f;
 
@@ -104,23 +106,23 @@ namespace ProjectPrikol
             _rigidbody.AddForce(_transform.right * (_horizontal * _moveSpeed * _deltaTime * multiplier));
         }
         
-        private void CounterMovement(float x, float y, Vector2 magnitude, float deltaTime)
+        private void CounterMovement(Vector2 magnitude, float deltaTime)
         {
             if (!_isGrounded)
                 return;
             if (_isPressingJumpButton)
                 return;
             
-            if (Math.Abs(magnitude.x) > _counterMovementThreshold && Math.Abs(x) < _axisThreshold ||
-                (magnitude.x < -_counterMovementThreshold && x > 0) ||
-                magnitude.x > _counterMovementThreshold && x < 0)
+            if (Math.Abs(magnitude.x) > _counterMovementThreshold && Math.Abs(_horizontal) < _axisThreshold ||
+                (magnitude.x < -_counterMovementThreshold && _horizontal > 0) ||
+                magnitude.x > _counterMovementThreshold && _horizontal < 0)
             {
                 _rigidbody.AddForce(_transform.right * (_moveSpeed * deltaTime * -magnitude.x * _counterMovement));
             }
 
-            if (Math.Abs(magnitude.y) > _counterMovementThreshold && Math.Abs(y) < _axisThreshold ||
-                (magnitude.y < -_counterMovementThreshold && y > 0) ||
-                (magnitude.y > _counterMovementThreshold && y < 0))
+            if (Math.Abs(magnitude.y) > _counterMovementThreshold && Math.Abs(_vertical) < _axisThreshold ||
+                (magnitude.y < -_counterMovementThreshold && _vertical > 0) ||
+                (magnitude.y > _counterMovementThreshold && _vertical < 0))
             {
                 _rigidbody.AddForce(_transform.forward * (_moveSpeed * deltaTime * -magnitude.y * _counterMovement));
             }

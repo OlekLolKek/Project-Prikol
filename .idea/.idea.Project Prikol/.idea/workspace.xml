@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/CrouchController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/CrouchController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerCrouchModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerCrouchModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/CameraController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/JumpController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/JumpController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerCollisionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerCollisionController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerJumpModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerJumpModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +77,8 @@
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/CrouchController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerJumpModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/JumpController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m1PgBgmx0wFuASJ2AYna74lKTs" />
@@ -157,7 +140,7 @@
       <workItem from="1609511605917" duration="8724000" />
       <workItem from="1609598418126" duration="9197000" />
       <workItem from="1609686025398" duration="1238000" />
-      <workItem from="1609776453615" duration="1333000" />
+      <workItem from="1609776453615" duration="2821000" />
     </task>
     <servers />
   </component>

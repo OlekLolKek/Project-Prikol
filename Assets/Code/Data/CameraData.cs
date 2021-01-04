@@ -6,6 +6,7 @@ namespace ProjectPrikol
     [CreateAssetMenu(fileName = "CameraData", menuName = "Data/CameraData")]
     public class CameraData : ScriptableObject, IData
     {
+        [SerializeField] private PostProcessResources _postProcessResources;
         [SerializeField] private LayerMask _postProcessingLayer;
         [SerializeField] private string _cameraName;
         [SerializeField, Range(1, 179)] private float _fov;
@@ -14,6 +15,8 @@ namespace ProjectPrikol
         [SerializeField] private float _sensitivity;
         [SerializeField] private float _sensitivityMultiplier;
         
+        
+        public PostProcessResources PostProcessResources => _postProcessResources;
         public LayerMask PostProcessingLayer => _postProcessingLayer;
         public string CameraName => _cameraName;
         public float FOV => _fov;
