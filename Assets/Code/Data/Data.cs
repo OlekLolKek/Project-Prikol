@@ -1,10 +1,11 @@
 ﻿using System.IO;
 using UnityEngine;
 
+
 namespace ProjectPrikol
 {
     [CreateAssetMenu(fileName = "Data", menuName = "Data/Data")]
-    public class Data : ScriptableObject
+    public class Data : ScriptableObject, IData
     {
         #region Fields
 

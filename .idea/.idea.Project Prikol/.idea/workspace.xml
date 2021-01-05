@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/DataLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/DataLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/IData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Factories/WeaponFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/Data.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/WeaponFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/IData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,25 +37,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/IData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Runtime/PostProcessLayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Code/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/ExecuteController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ICleanable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IControllable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IExecutable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInitializable.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ILateExecutable.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputAxisChange.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Storages/AxisNameStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Storages/KeyCodeStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" />
@@ -57,9 +67,7 @@
       <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/CameraModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/CursorController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" />
@@ -79,6 +87,16 @@
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerJumpModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/JumpController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/DataLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/IData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/WeaponFactory.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m1PgBgmx0wFuASJ2AYna74lKTs" />
@@ -91,6 +109,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -140,7 +159,8 @@
       <workItem from="1609511605917" duration="8724000" />
       <workItem from="1609598418126" duration="9197000" />
       <workItem from="1609686025398" duration="1238000" />
-      <workItem from="1609776453615" duration="2821000" />
+      <workItem from="1609776453615" duration="5074000" />
+      <workItem from="1609804773512" duration="2555000" />
     </task>
     <servers />
   </component>

@@ -23,14 +23,19 @@
             </e>
           </e>
           <e p="Data" t="Include">
+            <e p="AssaultRifleData.cs" t="Include" />
             <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
+            <e p="DataLoader.cs" t="Include" />
+            <e p="IData.cs" t="Include" />
             <e p="InputData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+            <e p="WeaponData.cs" t="Include" />
           </e>
           <e p="Factories" t="Include">
             <e p="CameraFactory.cs" t="Include" />
             <e p="PlayerFactory.cs" t="Include" />
+            <e p="WeaponFactory.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="PCInputAxis.cs" t="Include" />
@@ -41,7 +46,6 @@
           <e p="Interfaces" t="Include">
             <e p="ICleanable.cs" t="Include" />
             <e p="IControllable.cs" t="Include" />
-            <e p="IData.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
             <e p="IFactory.cs" t="Include" />
             <e p="IInitializable.cs" t="Include" />
@@ -52,6 +56,7 @@
               <e p="IInputKeyPress.cs" t="Include" />
               <e p="IInputKeyRelease.cs" t="Include" />
             </e>
+            <e p="IWeaponData.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />
