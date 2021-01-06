@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 
 namespace ProjectPrikol
@@ -16,9 +17,10 @@ namespace ProjectPrikol
         private readonly Vector3 _crouchScale;
         private readonly Vector3 _playerScale;
 
-        private readonly float _crouchBoostSpeed = 0.5f;
-        private readonly float _crouchHeight = 0.6f;
-        private readonly float _slideForce;
+        private readonly float _crouchTime = 0.05f;
+        private readonly float _crouchBoostSpeed = 1.0f;
+        private readonly float _crouchHeight = 0.75f;
+        private readonly float _slideForce = 750;
 
 
         public CrouchController(InputModel inputModel, PlayerCrouchModel crouchModel,
@@ -49,15 +51,17 @@ namespace ProjectPrikol
         private void StartCrouch()
         {
             _playerCrouchModel.IsCrouching = true;
-            _transform.localScale = _crouchScale;
+            _transform.DOScale(_crouchScale, _crouchTime);
             var position = _transform.position;
-            position = new Vector3(position.x, position.y - _crouchHeight, position.z);
-            _transform.position = position;
+            _transform.DOMoveY(position.y - _crouchHeight, _crouchTime);
+            
             if (_playerJumpModel.IsGrounded)
             {
                 if (_rigidbody.velocity.magnitude > _crouchBoostSpeed)
                 {
-                    _rigidbody.AddForce(_transform.forward * _slideForce);
+                    var velocity = _rigidbody.velocity.normalized;
+                    var direction = new Vector3(velocity.x, 0.0f, velocity.z);
+                    _rigidbody.AddForce(direction * _slideForce);
                 }
             }
         }
@@ -65,10 +69,9 @@ namespace ProjectPrikol
         private void StopCrouch()
         {
             _playerCrouchModel.IsCrouching = false;
-            _transform.localScale = _playerScale;
+            _transform.DOScale(_playerScale, _crouchTime);
             var position = _transform.position;
-            position = new Vector3(position.x, position.y + _crouchHeight, position.z);
-            _transform.position = position;
+            _transform.DOMoveY(position.y + _crouchHeight, _crouchTime);
         }
 
         public void Cleanup()

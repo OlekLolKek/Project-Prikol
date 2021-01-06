@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 namespace ProjectPrikol
@@ -11,7 +10,6 @@ namespace ProjectPrikol
         public Rigidbody Rigidbody { get; private set; }
         public Transform Transform { get; private set; }
         public Transform Head { get; private set; }
-        
         public PlayerView PlayerView { get; private set; }
 
         public PlayerFactory(PlayerData playerData)
@@ -26,7 +24,8 @@ namespace ProjectPrikol
             player.AddComponent<MeshFilter>().mesh = _playerData.PlayerMesh;
             var renderer = player.AddComponent<MeshRenderer>();
             renderer.material = _playerData.PlayerMaterial;
-            player.AddComponent<CapsuleCollider>();
+            var collider = player.AddComponent<CapsuleCollider>();
+            collider.material = _playerData.PhysicMaterial;
             Transform.localScale = _playerData.PlayerScale;
             
             Rigidbody = player.AddComponent<Rigidbody>();
@@ -40,6 +39,9 @@ namespace ProjectPrikol
             Head.localPosition = _playerData.HeadPosition;
 
             PlayerView = player.AddComponent<PlayerView>();
+
+            Transform.position = _playerData.SpawnPosition;
+            player.layer = _playerData.PlayerLayerID;
 
             return player;
         }

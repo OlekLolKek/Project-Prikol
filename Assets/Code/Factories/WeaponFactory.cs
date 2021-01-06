@@ -13,6 +13,11 @@ namespace ProjectPrikol
         {
             _data = data;
         }
+
+        public void ChangeType(IWeaponData data)
+        {
+            _data = data;
+        }
         
         public GameObject Create()
         {
@@ -20,7 +25,7 @@ namespace ProjectPrikol
             
             Transform = gun.transform;
             Transform.localScale = _data.Scale;
-            
+
             gun.AddComponent<MeshFilter>().mesh = _data.Mesh;
             var renderer = gun.AddComponent<MeshRenderer>();
             renderer.material = _data.Material;

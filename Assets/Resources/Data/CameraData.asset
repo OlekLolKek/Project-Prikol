@@ -17,6 +17,9 @@ MonoBehaviour:
   _postProcessingLayer:
     serializedVersion: 2
     m_Bits: 512
+  _cullingLayerMask:
+    serializedVersion: 2
+    m_Bits: 823
   _cameraName: Camera
   _fov: 75
   _clippingPlaneFar: 100

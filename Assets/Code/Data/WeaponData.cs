@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectPrikol
 {
-    [CreateAssetMenu(fileName = "WeaponData", menuName = "Data/WeaponData")]
+    [CreateAssetMenu(fileName = "WeaponData", menuName = "Data/Weapon/WeaponData")]
     public class WeaponData : ScriptableObject
     {
         [SerializeField] private string _weaponDataRootPath;

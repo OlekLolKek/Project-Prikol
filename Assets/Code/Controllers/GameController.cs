@@ -5,6 +5,7 @@ namespace ProjectPrikol
 {
     public class GameController : MonoBehaviour
     {
+        [SerializeField] private WeaponData _weaponData;
         [SerializeField] private Data _data;
         private Controllers _controllers;
 
@@ -30,6 +31,8 @@ namespace ProjectPrikol
             
             var cameraController = new CameraController(cameraModel, _data.CameraData, 
                 playerModel, inputModel);
+
+            var weaponController = new WeaponController(inputModel, _weaponData);
 
             var cursorController = new CursorController();
 

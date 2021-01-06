@@ -34,6 +34,8 @@ namespace ProjectPrikol
             postProcessing.volumeLayer = _cameraData.PostProcessingLayer;
             postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
 
+            Camera.cullingMask = _cameraData.CullingLayerMask.value;
+
             return Camera.gameObject;
         }
     }

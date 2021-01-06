@@ -1,4 +1,49 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using System;
+using System.Collections.Generic;
+
+
+namespace ProjectPrikol
 {
-  public class $CLASS$ {$END$}
+    public class WeaponInventory
+    {
+        //TODO: replace 3 with a field
+        private Weapon[] _weapons = new Weapon[3];
+
+        public int ActiveWeaponID { get; private set; }
+
+        public WeaponInventory()
+        {
+        }
+
+        public void AddWeapon(Weapon weapon)
+        {
+            for (int i = 0; i < _weapons.Length; i++)
+            {
+                if (_weapons[i] == null)
+                {
+                    _weapons[i] = weapon;
+                    return;
+                }
+            }
+
+            _weapons[ActiveWeaponID] = weapon;
+        }
+
+        public void SwitchWeapons(int id)
+        {
+            if (id >= _weapons.Length)
+                throw new ArgumentOutOfRangeException($"{nameof(id)} is out of inventory's range.");
+
+            _weapons[ActiveWeaponID].SetActive(false);
+            ActiveWeaponID = id;
+            _weapons[ActiveWeaponID].SetActive(true);
+        }
+
+        
+        //TODO: replace with actual dropping instead of deleting
+        public void DropWeapon(Weapon weapon)
+        {
+            _weapons[ActiveWeaponID] = null;
+        }
+    }
 }
