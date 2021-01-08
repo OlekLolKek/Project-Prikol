@@ -2,7 +2,7 @@
 
 namespace ProjectPrikol
 {
-    public interface IWeaponData
+    public interface IWeaponData : IData
     {
         Vector3 BarrelPosition { get; }
         Vector3 Position { get; }

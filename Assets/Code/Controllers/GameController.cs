@@ -24,7 +24,8 @@ namespace ProjectPrikol
                 inputModel.Horizontal, inputModel.Vertical,
                 inputModel.MouseX, inputModel.MouseY, 
                 inputModel.StartCrouch, inputModel.StopCrouch,
-                inputModel.Jump);
+                inputModel.Jump, inputModel.Weapon1,
+                inputModel.Weapon2, inputModel.Weapon3);
             
             var playerController = new PlayerController(playerModel, inputModel, 
                 _data.PlayerData);
@@ -32,13 +33,15 @@ namespace ProjectPrikol
             var cameraController = new CameraController(cameraModel, _data.CameraData, 
                 playerModel, inputModel);
 
-            var weaponController = new WeaponController(inputModel, _weaponData);
+            var weaponController = new WeaponController(inputModel, _weaponData, 
+                cameraModel);
 
             var cursorController = new CursorController();
 
             _controllers.Add(inputController);
             _controllers.Add(playerController);
             _controllers.Add(cameraController);
+            _controllers.Add(weaponController);
             _controllers.Add(cursorController);
 
             _controllers.Initialize();

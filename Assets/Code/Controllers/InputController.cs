@@ -9,6 +9,9 @@
         private readonly IInputAxisChange _mouseX;
         private readonly IInputAxisChange _mouseY;
         private readonly IInputKeyPress _startCrouch;
+        private readonly IInputKeyPress _weapon1;
+        private readonly IInputKeyPress _weapon2;
+        private readonly IInputKeyPress _weapon3;
         private readonly IInputKeyRelease _endCrouch;
         private readonly IInputKeyHold _jump;
 
@@ -17,7 +20,8 @@
         public InputController(IInputAxisChange inputHorizontal, IInputAxisChange inputVertical,
             IInputAxisChange mouseX, IInputAxisChange mouseY,
             IInputKeyPress startCrouch, IInputKeyRelease endCrouch,
-            IInputKeyHold jump)
+            IInputKeyHold jump, IInputKeyPress weapon1,
+            IInputKeyPress weapon2, IInputKeyPress weapon3)
         {
             _horizontal = inputHorizontal;
             _vertical = inputVertical;
@@ -26,6 +30,9 @@
             _startCrouch = startCrouch;
             _endCrouch = endCrouch;
             _jump = jump;
+            _weapon1 = weapon1;
+            _weapon2 = weapon2;
+            _weapon3 = weapon3;
         }
         
         
@@ -39,6 +46,10 @@
             _startCrouch.GetKeyDown();
             _endCrouch.GetKeyUp();
             _jump.GetKey();
+            
+            _weapon1.GetKeyDown();
+            _weapon2.GetKeyDown();
+            _weapon3.GetKeyDown();
         }
     }
 }

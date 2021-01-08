@@ -9,6 +9,13 @@ namespace ProjectPrikol
         //TODO: replace 3 with a field
         private Weapon[] _weapons = new Weapon[3];
 
+        public Weapon ActiveWeapon
+        {
+            get
+            {
+                return _weapons[ActiveWeaponID];
+            }
+        }
         public int ActiveWeaponID { get; private set; }
 
         public WeaponInventory()
@@ -31,12 +38,14 @@ namespace ProjectPrikol
 
         public void SwitchWeapons(int id)
         {
+            if (_weapons[id] == null) 
+                return;
             if (id >= _weapons.Length)
                 throw new ArgumentOutOfRangeException($"{nameof(id)} is out of inventory's range.");
 
-            _weapons[ActiveWeaponID].SetActive(false);
+            _weapons[ActiveWeaponID].Deactivate();
             ActiveWeaponID = id;
-            _weapons[ActiveWeaponID].SetActive(true);
+            _weapons[ActiveWeaponID].Activate();
         }
 
         

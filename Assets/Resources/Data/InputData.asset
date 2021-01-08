@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _crouch: 306
   _jump: 32
+  _weapon1: 49
+  _weapon2: 50
+  _weapon3: 51

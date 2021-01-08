@@ -21,6 +21,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 823
   _cameraName: Camera
+  _FOVChangeMultiplier: 0.15
   _fov: 75
   _clippingPlaneFar: 100
   _clippingPlaneNear: 0.03

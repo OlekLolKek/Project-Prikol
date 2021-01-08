@@ -10,17 +10,19 @@ namespace ProjectPrikol
         [SerializeField] private LayerMask _postProcessingLayer;
         [SerializeField] private LayerMask _cullingLayerMask;
         [SerializeField] private string _cameraName;
+        [SerializeField] private float _FOVChangeMultiplier;
         [SerializeField, Range(1, 179)] private float _fov;
         [SerializeField, Range(0.01f, 5000)] private float _clippingPlaneFar;
         [SerializeField, Range(0.01f, 5000)] private float _clippingPlaneNear;
         [SerializeField] private float _sensitivity;
         [SerializeField] private float _sensitivityMultiplier;
-        
-        
+
+
         public PostProcessResources PostProcessResources => _postProcessResources;
         public LayerMask PostProcessingLayer => _postProcessingLayer;
         public LayerMask CullingLayerMask => _cullingLayerMask;
         public string CameraName => _cameraName;
+        public float FOVChangeMultiplier => _FOVChangeMultiplier;
         public float FOV => _fov;
         public float ClippingPlaneFar => _clippingPlaneFar;
         public float ClippingPlaneNear => _clippingPlaneNear;

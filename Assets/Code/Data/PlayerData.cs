@@ -15,10 +15,8 @@ namespace ProjectPrikol
         [SerializeField] private Vector3 _headPosition;
         [SerializeField] private Mesh _playerMesh;
         [SerializeField] private string _playerName;
-        [SerializeField] private string _orientationName;
         [SerializeField] private string _headName;
         [SerializeField] private float _speed;
-        [SerializeField] private float _slideForce;
         [SerializeField] private float _jumpForce;
         [SerializeField] private float _mass;
         [SerializeField] private int _playerLayerID;
@@ -33,10 +31,8 @@ namespace ProjectPrikol
         public Vector3 HeadPosition => _headPosition;
         public Mesh PlayerMesh => _playerMesh;
         public string PlayerName => _playerName;
-        public string OrientationName => _orientationName;
         public string HeadName => _headName;
         public float Speed => _speed;
-        public float SlideForce => _slideForce;
         public float JumpForce => _jumpForce;
         public float Mass => _mass;
         public int PlayerLayerID => _playerLayerID;

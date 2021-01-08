@@ -13,6 +13,9 @@ namespace ProjectPrikol
         public IInputKeyPress StartCrouch { get; }
         public IInputKeyRelease StopCrouch { get; }
         public IInputKeyHold Jump { get; }
+        public IInputKeyPress Weapon1 { get; }
+        public IInputKeyPress Weapon2 { get; }
+        public IInputKeyPress Weapon3 { get; }
 
         #endregion
 
@@ -26,6 +29,9 @@ namespace ProjectPrikol
             StartCrouch = new PCInputKeyDown(inputData.Crouch);
             StopCrouch = new PCInputKeyUp(inputData.Crouch);
             Jump = new PCInputKeyHold(inputData.Jump);
+            Weapon1 = new PCInputKeyDown(inputData.Weapon1);
+            Weapon2 = new PCInputKeyDown(inputData.Weapon2);
+            Weapon3 = new PCInputKeyDown(inputData.Weapon3);
         }
     }
 }

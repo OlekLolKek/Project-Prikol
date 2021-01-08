@@ -5,14 +5,18 @@ namespace ProjectPrikol
 {
     public class CameraController : IExecutable, ICleanable
     {
+        private readonly Camera _camera;
         private readonly Transform _cameraTransform;
         private readonly Transform _playerTransform;
         private readonly Transform _headTransform;
+        private readonly Rigidbody _rigidbody;
 
+        private readonly float _FOVChangeMultiplier;
         private readonly float _maxXRotation = 90.0f;
         private readonly float _minXRotation = -90.0f;
         private readonly float _sensitivity;
         private readonly float _sensitivityMultiplier;
+        private readonly float _baseFOV;
         
         private float _xRotation;
         private float _mouseX;
@@ -21,12 +25,16 @@ namespace ProjectPrikol
         public CameraController(CameraModel cameraModel, CameraData cameraData,
             PlayerModel playerModel, InputModel inputModel)
         {
+            _camera = cameraModel.Camera;
             _cameraTransform = cameraModel.CameraTransform;
             _playerTransform = playerModel.Transform;
             _headTransform = playerModel.Head;
+            _rigidbody = playerModel.Rigidbody;
 
+            _FOVChangeMultiplier = cameraData.FOVChangeMultiplier;
             _sensitivity = cameraData.Sensitivity;
             _sensitivityMultiplier = cameraData.SensitivityMultiplier;
+            _baseFOV = cameraData.FOV;
             
             var mouseX = inputModel.MouseX;
             var mouseY = inputModel.MouseY;
@@ -40,11 +48,19 @@ namespace ProjectPrikol
         {
             MoveCamera();
             RotateCamera(deltaTime);
+            ChangeFOV();
         }
 
         private void MoveCamera()
         {
             _cameraTransform.position = _headTransform.position;
+        }
+
+        private void ChangeFOV()
+        {
+            var velocity = _rigidbody.velocity.magnitude;
+            var newFOV = _baseFOV + velocity * _FOVChangeMultiplier;
+            _camera.fieldOfView = newFOV;
         }
 
         private void RotateCamera(float deltaTime)

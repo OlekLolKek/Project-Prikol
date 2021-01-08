@@ -2,37 +2,26 @@
 
 namespace ProjectPrikol
 {
-    public class WeaponFactory : IFactory
+    public class WeaponFactory : IWeaponFactory
     {
-        private IWeaponData _data;
-
         public Transform Transform { get; private set; }
         public Transform BarrelTransform { get; private set; }
         
-        public WeaponFactory(IWeaponData data)
-        {
-            _data = data;
-        }
 
-        public void ChangeType(IWeaponData data)
+        public GameObject Create(IWeaponData data)
         {
-            _data = data;
-        }
-        
-        public GameObject Create()
-        {
-            var gun = new GameObject(_data.Name);
+            var gun = new GameObject(data.Name);
             
             Transform = gun.transform;
-            Transform.localScale = _data.Scale;
+            Transform.localScale = data.Scale;
 
-            gun.AddComponent<MeshFilter>().mesh = _data.Mesh;
+            gun.AddComponent<MeshFilter>().mesh = data.Mesh;
             var renderer = gun.AddComponent<MeshRenderer>();
-            renderer.material = _data.Material;
+            renderer.material = data.Material;
 
-            BarrelTransform = new GameObject(_data.BarrelName).transform;
+            BarrelTransform = new GameObject(data.BarrelName).transform;
             BarrelTransform.parent = Transform;
-            BarrelTransform.localPosition = _data.BarrelPosition;
+            BarrelTransform.localPosition = data.BarrelPosition;
 
             return gun;
         }
