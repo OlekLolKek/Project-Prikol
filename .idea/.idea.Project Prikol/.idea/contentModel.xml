@@ -22,7 +22,6 @@
               <e p="PlayerCollisionController.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
             </e>
-            <e p="WeaponController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
             <e p="AssaultRifleData.cs" t="Include" />
@@ -37,7 +36,6 @@
           <e p="Factories" t="Include">
             <e p="CameraFactory.cs" t="Include" />
             <e p="PlayerFactory.cs" t="Include" />
-            <e p="WeaponFactory.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="PCInputAxis.cs" t="Include" />
@@ -58,8 +56,6 @@
               <e p="IInputKeyPress.cs" t="Include" />
               <e p="IInputKeyRelease.cs" t="Include" />
             </e>
-            <e p="IWeaponData.cs" t="Include" />
-            <e p="IWeaponFactory.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />
@@ -67,14 +63,26 @@
             <e p="PlayerCrouchModel.cs" t="Include" />
             <e p="PlayerJumpModel.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
-            <e p="WeaponInventory.cs" t="Include" />
           </e>
           <e p="Storages" t="Include">
             <e p="AxisNameStorage.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="PlayerView.cs" t="Include" />
+          </e>
+          <e p="Weapons" t="Include">
+            <e p="IFire.cs" t="Include" />
+            <e p="ISilencer.cs" t="Include" />
+            <e p="IWeaponData.cs" t="Include" />
+            <e p="IWeaponFactory.cs" t="Include" />
+            <e p="Silencer.cs" t="Include" />
+            <e p="SilencerModification.cs" t="Include" />
+            <e p="TracerFactory.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+            <e p="WeaponController.cs" t="Include" />
+            <e p="WeaponFactory.cs" t="Include" />
+            <e p="WeaponInventory.cs" t="Include" />
+            <e p="WeaponModification.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

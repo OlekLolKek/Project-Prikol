@@ -6,6 +6,7 @@ namespace ProjectPrikol
     {
         public Transform Transform { get; private set; }
         public Transform BarrelTransform { get; private set; }
+        public AudioSource AudioSource { get; private set; }
         
 
         public GameObject Create(IWeaponData data)
@@ -22,6 +23,10 @@ namespace ProjectPrikol
             BarrelTransform = new GameObject(data.BarrelName).transform;
             BarrelTransform.parent = Transform;
             BarrelTransform.localPosition = data.BarrelPosition;
+            
+            AudioSource = BarrelTransform.gameObject.AddComponent<AudioSource>();
+            AudioSource.loop = false;
+            AudioSource.playOnAwake = false;
 
             return gun;
         }

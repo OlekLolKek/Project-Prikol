@@ -16,6 +16,7 @@ namespace ProjectPrikol
                 return _weapons[ActiveWeaponID];
             }
         }
+
         public int ActiveWeaponID { get; private set; }
 
         public WeaponInventory()

@@ -17,3 +17,5 @@ MonoBehaviour:
   _weapon1: 49
   _weapon2: 50
   _weapon3: 51
+  _changeMod: 102
+  _fire: 323

@@ -20,12 +20,7 @@ namespace ProjectPrikol
             var playerModel = new PlayerModel(playerFactory);
             var cameraModel = new CameraModel(cameraFactory);
 
-            var inputController = new InputController(
-                inputModel.Horizontal, inputModel.Vertical,
-                inputModel.MouseX, inputModel.MouseY, 
-                inputModel.StartCrouch, inputModel.StopCrouch,
-                inputModel.Jump, inputModel.Weapon1,
-                inputModel.Weapon2, inputModel.Weapon3);
+            var inputController = new InputController(inputModel);
             
             var playerController = new PlayerController(playerModel, inputModel, 
                 _data.PlayerData);
