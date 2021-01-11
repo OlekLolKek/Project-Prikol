@@ -8,19 +8,14 @@ namespace ProjectPrikol
     {
         //TODO: replace 3 with a field
         private Weapon[] _weapons = new Weapon[3];
+        private int _activeWeaponID;
 
         public Weapon ActiveWeapon
         {
             get
             {
-                return _weapons[ActiveWeaponID];
+                return _weapons[_activeWeaponID];
             }
-        }
-
-        public int ActiveWeaponID { get; private set; }
-
-        public WeaponInventory()
-        {
         }
 
         public void AddWeapon(Weapon weapon)
@@ -34,7 +29,7 @@ namespace ProjectPrikol
                 }
             }
 
-            _weapons[ActiveWeaponID] = weapon;
+            _weapons[_activeWeaponID] = weapon;
         }
 
         public void SwitchWeapons(int id)
@@ -44,16 +39,16 @@ namespace ProjectPrikol
             if (id >= _weapons.Length)
                 throw new ArgumentOutOfRangeException($"{nameof(id)} is out of inventory's range.");
 
-            _weapons[ActiveWeaponID].Deactivate();
-            ActiveWeaponID = id;
-            _weapons[ActiveWeaponID].Activate();
+            _weapons[_activeWeaponID].Deactivate();
+            _activeWeaponID = id;
+            _weapons[_activeWeaponID].Activate();
         }
 
         
         //TODO: replace with actual dropping instead of deleting
         public void DropWeapon(Weapon weapon)
         {
-            _weapons[ActiveWeaponID] = null;
+            _weapons[_activeWeaponID] = null;
         }
     }
 }

@@ -4,7 +4,6 @@ namespace ProjectPrikol
 {
     public class WeaponController : IExecutable, ICleanable
     {
-        private IFire _firingThingy;
         private readonly IInputKeyPress _primary;
         private readonly IInputKeyPress _secondary;
         private readonly IInputKeyPress _melee;
@@ -12,8 +11,8 @@ namespace ProjectPrikol
         private readonly IInputKeyPress _changeMod;
         private readonly IInputAxisChange _mouseXInput;
         private readonly IInputAxisChange _mouseYInput;
-        private readonly Controllers _controllers;
         private readonly WeaponInventory _inventory;
+        private readonly WeaponModification _modification;
 
         private float _mouseX;
         private float _mouseY;
@@ -21,7 +20,6 @@ namespace ProjectPrikol
         public WeaponController(InputModel inputModel, WeaponData data,
             CameraModel cameraModel)
         {
-            _controllers = new Controllers();
             _inventory = new WeaponInventory();
             var factory = new WeaponFactory();
             var silencerFactory = new SilencerFactory(data.AssaultRifleSilencerData);
@@ -42,16 +40,13 @@ namespace ProjectPrikol
             _mouseXInput.OnAxisChanged += MouseXChange;
             _mouseYInput.OnAxisChanged += MouseYChange;
             
+
             
             var weapon = new Weapon(factory, data.AssaultRifleData, cameraModel);
-            weapon.Deactivate();
             _inventory.AddWeapon(weapon);
-
+            
             var silencer = new Silencer(silencerFactory, weapon);
-            WeaponModification weaponModification =
-                new SilencerModification(silencer, data.AssaultRifleData.BarrelPosition);
-            weaponModification.ApplyModification(weapon);
-            _firingThingy = weaponModification;
+            _modification = new SilencerModification(silencer);
         }
 
         public void Execute(float deltaTime)
@@ -88,8 +83,7 @@ namespace ProjectPrikol
 
         private void Shoot()
         {
-            _firingThingy.Fire();
-            //_inventory.ActiveWeapon.Fire();
+            _inventory.ActiveWeapon.Fire();
         }
 
         public void Cleanup()
@@ -105,6 +99,7 @@ namespace ProjectPrikol
 
         private void ChangeModification()
         {
+            _modification.SwitchModifications(_inventory.ActiveWeapon);
         }
     }
 }

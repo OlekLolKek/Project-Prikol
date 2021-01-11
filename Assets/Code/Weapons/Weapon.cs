@@ -1,29 +1,29 @@
 ﻿using System.Collections;
-using DG.Tweening;
 using UniRx;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 namespace ProjectPrikol
 {
     public class Weapon : IExecutable, IFire
     {
         #region Fields
-        
-        private AudioClip _audioClip;
 
+        private AudioClip _audioClip;
         private readonly AudioSource _audioSource;
         private readonly TracerFactory _tracerFactory;
         private readonly LayerMask _hitLayerMask;
         private readonly GameObject _instance;
         private readonly Transform _cameraTransform;
+        private readonly Transform _baseBarrel;
         private readonly Camera _camera;
         private readonly Vector3 _position;
 
         private float _mouseX;
         private float _mouseY;
         private float _deltaTime;
-        
+        private bool _isSilenced = false;
+
         private readonly float _tracerFadeMultiplier;
         private readonly float _colorFadeMultiplier = 15;
         private readonly float _maxShotDistance;
@@ -56,15 +56,18 @@ namespace ProjectPrikol
 
             _instance = factory.Create(data);
             Barrel = factory.BarrelTransform;
+            _baseBarrel = Barrel;
             _audioSource = factory.AudioSource;
 
             _cameraTransform = cameraModel.CameraTransform;
             _camera = cameraModel.Camera;
-            
+
             _instance.transform.parent = _cameraTransform;
             _instance.transform.localPosition = _position;
 
             _tracerFactory = new TracerFactory(data);
+            
+            Deactivate();
         }
 
         #region Methods
@@ -80,9 +83,9 @@ namespace ProjectPrikol
 
             _tracerFactory.Create();
             var line = _tracerFactory.LineRenderer;
-            
+
             line.SetPosition(0, Barrel.position);
-            
+
             var ray = _camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
             if (Physics.Raycast(ray, out var hit, _maxShotDistance, _hitLayerMask))
             {
@@ -94,7 +97,7 @@ namespace ProjectPrikol
             }
 
             _audioSource.Play();
-            
+
             TweenLineWidth(line).ToObservable().Subscribe();
         }
 
@@ -129,6 +132,11 @@ namespace ProjectPrikol
             Barrel = barrel;
         }
 
+        public void ResetBarrelPosition()
+        {
+            Barrel = _baseBarrel;
+        }
+
         public void SetAudioClip(AudioClip clip)
         {
             _audioSource.clip = clip;
@@ -138,7 +146,7 @@ namespace ProjectPrikol
         {
             IsActive = true;
             _instance.SetActive(true);
-            _instance.transform.localRotation = Quaternion.identity;
+            //.transform.localRotation = Quaternion.identity;
         }
 
         public void Deactivate()
