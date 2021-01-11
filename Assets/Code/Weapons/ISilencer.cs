@@ -4,9 +4,11 @@ namespace ProjectPrikol
 {
     public interface ISilencer
     {
-        AudioClip SilencedClip { get; }
-        float SilencedShotVolume { get; }
-        Transform SilencerBarrelPosition { get; }
+        Transform SilencerBarrel { get; }
         GameObject Instance { get; }
+        bool IsActive { get; set; }
+
+        void Activate();
+        void Deactivate();
     }
 }

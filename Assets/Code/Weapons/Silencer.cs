@@ -4,18 +4,34 @@ namespace ProjectPrikol
 {
     public class Silencer : ISilencer
     {
-        public AudioClip SilencedClip { get; }
-        public float SilencedShotVolume { get; }
-        public Transform SilencerBarrelPosition { get; }
+        private Transform _weaponBarrel;
+        
+        
+        public Transform SilencerBarrel { get; }
         public GameObject Instance { get; }
+        public bool IsActive { get; set; }
+        
 
-        public Silencer(AudioClip silencedClip, float silencedShotVolume,
-            Transform silencerBarrelPosition, GameObject instance)
+        public Silencer(SilencerFactory factory, Weapon weapon)
         {
-            SilencedClip = silencedClip;
-            SilencedShotVolume = silencedShotVolume;
-            SilencerBarrelPosition = silencerBarrelPosition;
-            Instance = instance;
+            Instance = factory.Create();
+            SilencerBarrel = factory.BarrelTransform;
+            _weaponBarrel = weapon.Barrel;
+        }
+
+        public void Activate()
+        {
+            IsActive = true;
+            Instance.SetActive(true);
+            Instance.transform.parent = _weaponBarrel;
+            Instance.transform.position = new Vector3(_weaponBarrel.position.x, _weaponBarrel.position.y,
+                _weaponBarrel.position.z + Instance.transform.localScale.z / 2);
+        }
+
+        public void Deactivate()
+        {
+            IsActive = false;
+            Instance.SetActive(false);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace ProjectPrikol
 {
     public class PCInputAxis : IInputAxisChange

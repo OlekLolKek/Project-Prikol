@@ -4,6 +4,7 @@ namespace ProjectPrikol
 {
     public interface IWeaponData : IData
     {
+        AudioClip ShotClip { get; }
         Material TracerMaterial { get; }
         LayerMask HitLayerMask { get; }
         Vector3 BarrelPosition { get; }

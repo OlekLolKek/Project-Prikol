@@ -25,6 +25,7 @@
           </e>
           <e p="Data" t="Include">
             <e p="AssaultRifleData.cs" t="Include" />
+            <e p="AssaultRifleSilencerData.cs" t="Include" />
             <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
             <e p="DataLoader.cs" t="Include" />
@@ -73,9 +74,11 @@
           <e p="Weapons" t="Include">
             <e p="IFire.cs" t="Include" />
             <e p="ISilencer.cs" t="Include" />
+            <e p="ISilencerData.cs" t="Include" />
             <e p="IWeaponData.cs" t="Include" />
             <e p="IWeaponFactory.cs" t="Include" />
             <e p="Silencer.cs" t="Include" />
+            <e p="SilencerFactory.cs" t="Include" />
             <e p="SilencerModification.cs" t="Include" />
             <e p="TracerFactory.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />

@@ -10,11 +10,10 @@ namespace ProjectPrikol
     {
         #region Fields
         
-        private Transform _barrel;
         private AudioClip _audioClip;
 
-        private readonly TracerFactory _factory;
-        private readonly Material _tracerMaterial;
+        private readonly AudioSource _audioSource;
+        private readonly TracerFactory _tracerFactory;
         private readonly LayerMask _hitLayerMask;
         private readonly GameObject _instance;
         private readonly Transform _cameraTransform;
@@ -24,9 +23,9 @@ namespace ProjectPrikol
         private float _mouseX;
         private float _mouseY;
         private float _deltaTime;
-
-        private readonly float _tracerWidth;
+        
         private readonly float _tracerFadeMultiplier;
+        private readonly float _colorFadeMultiplier = 15;
         private readonly float _maxShotDistance;
         private readonly int _linePositionCount = 2;
 
@@ -35,6 +34,7 @@ namespace ProjectPrikol
 
         #region Properties
 
+        public Transform Barrel { get; private set; }
         public bool IsActive { get; private set; }
         public float Damage { get; set; }
         public float ShootCooldown { get; set; }
@@ -51,18 +51,20 @@ namespace ProjectPrikol
             _hitLayerMask = data.HitLayerMask;
             Damage = data.Damage;
             ShootCooldown = data.ShootCooldown;
-            _tracerWidth = data.TracerWidth;
             _tracerFadeMultiplier = data.TracerFadeMultiplier;
             _maxShotDistance = data.MaxShotDistance;
-            _tracerMaterial = data.TracerMaterial;
 
             _instance = factory.Create(data);
-            _barrel = factory.BarrelTransform;
+            Barrel = factory.BarrelTransform;
+            _audioSource = factory.AudioSource;
 
             _cameraTransform = cameraModel.CameraTransform;
             _camera = cameraModel.Camera;
+            
+            _instance.transform.parent = _cameraTransform;
+            _instance.transform.localPosition = _position;
 
-            _factory = new TracerFactory(data);
+            _tracerFactory = new TracerFactory(data);
         }
 
         #region Methods
@@ -76,10 +78,10 @@ namespace ProjectPrikol
         {
             if (!IsActive) return;
 
-            _factory.Create();
-            var line = _factory.LineRenderer;
+            _tracerFactory.Create();
+            var line = _tracerFactory.LineRenderer;
             
-            line.SetPosition(0, _barrel.position);
+            line.SetPosition(0, Barrel.position);
             
             var ray = _camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
             if (Physics.Raycast(ray, out var hit, _maxShotDistance, _hitLayerMask))
@@ -91,6 +93,8 @@ namespace ProjectPrikol
                 line.SetPosition(1, _cameraTransform.localPosition + _cameraTransform.forward * _maxShotDistance);
             }
 
+            _audioSource.Play();
+            
             TweenLineWidth(line).ToObservable().Subscribe();
         }
 
@@ -101,10 +105,9 @@ namespace ProjectPrikol
                 line.endWidth -= _deltaTime * _tracerFadeMultiplier;
                 line.startWidth -= _deltaTime * _tracerFadeMultiplier;
 
-                var color = line.endColor;
-                color.a -= _deltaTime * _tracerFadeMultiplier;
-                line.endColor = color;
-                line.startColor = color;
+                var color = line.material.color;
+                color.a -= _deltaTime * _tracerFadeMultiplier * _colorFadeMultiplier;
+                line.material.color = color;
 
                 yield return 0;
             }
@@ -123,20 +126,18 @@ namespace ProjectPrikol
 
         public void SetBarrelPosition(Transform barrel)
         {
-            _barrel = barrel;
+            Barrel = barrel;
         }
 
         public void SetAudioClip(AudioClip clip)
         {
-            _audioClip = clip;
+            _audioSource.clip = clip;
         }
 
         public void Activate()
         {
             IsActive = true;
             _instance.SetActive(true);
-            _instance.transform.parent = _cameraTransform;
-            _instance.transform.localPosition = _position;
             _instance.transform.localRotation = Quaternion.identity;
         }
 

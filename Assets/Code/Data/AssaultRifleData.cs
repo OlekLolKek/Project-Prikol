@@ -5,6 +5,7 @@ namespace ProjectPrikol
     [CreateAssetMenu(fileName = "AssaultRifleData", menuName = "Data/Weapon/AssaultRifleData")]
     public class AssaultRifleData : ScriptableObject, IData, IWeaponData
     {
+        [SerializeField] private AudioClip _shotClip;
         [SerializeField] private Material _tracerMaterial;
         [SerializeField] private LayerMask _hitLayerMask;
         [SerializeField] private Vector3 _barrelPosition;
@@ -21,7 +22,9 @@ namespace ProjectPrikol
         [SerializeField] private float _tracerWidth;
         [SerializeField] private float _shootCooldown;
         [SerializeField] private float _damage;
-        
+
+
+        public AudioClip ShotClip => _shotClip;
         public Material TracerMaterial => _tracerMaterial;
         public LayerMask HitLayerMask => _hitLayerMask;
         public Vector3 BarrelPosition => _barrelPosition;

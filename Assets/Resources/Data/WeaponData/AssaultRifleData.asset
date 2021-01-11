@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f121f8e1118b4301b2ce383b84eabd4a, type: 3}
   m_Name: AssaultRifleData
   m_EditorClassIdentifier: 
+  _shotClip: {fileID: 8300000, guid: 83a8eda696caf1b4582594010d75d553, type: 3}
   _tracerMaterial: {fileID: 2100000, guid: d1d92fd630f96164894af21994d2c3c7, type: 2}
   _hitLayerMask:
     serializedVersion: 2
@@ -23,6 +24,7 @@ MonoBehaviour:
   _mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _name: AssaultRifle
   _barrelName: Barrel
+  _tracerName: Tracer
   _tracerFadeMultiplier: 1.5
   _maxShotDistance: 50
   _tracerWidth: 0.125

@@ -4,6 +4,7 @@ namespace ProjectPrikol
 {
     public class WeaponController : IExecutable, ICleanable
     {
+        private IFire _firingThingy;
         private readonly IInputKeyPress _primary;
         private readonly IInputKeyPress _secondary;
         private readonly IInputKeyPress _melee;
@@ -23,6 +24,7 @@ namespace ProjectPrikol
             _controllers = new Controllers();
             _inventory = new WeaponInventory();
             var factory = new WeaponFactory();
+            var silencerFactory = new SilencerFactory(data.AssaultRifleSilencerData);
 
             _primary = inputModel.Weapon1;
             _secondary = inputModel.Weapon2;
@@ -45,8 +47,11 @@ namespace ProjectPrikol
             weapon.Deactivate();
             _inventory.AddWeapon(weapon);
 
-            //var silencer = new Silencer(null, 15.0f,  );
-            
+            var silencer = new Silencer(silencerFactory, weapon);
+            WeaponModification weaponModification =
+                new SilencerModification(silencer, data.AssaultRifleData.BarrelPosition);
+            weaponModification.ApplyModification(weapon);
+            _firingThingy = weaponModification;
         }
 
         public void Execute(float deltaTime)
@@ -83,7 +88,8 @@ namespace ProjectPrikol
 
         private void Shoot()
         {
-            _inventory.ActiveWeapon.Fire();
+            _firingThingy.Fire();
+            //_inventory.ActiveWeapon.Fire();
         }
 
         public void Cleanup()

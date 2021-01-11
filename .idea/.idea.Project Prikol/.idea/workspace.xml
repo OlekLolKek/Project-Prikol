@@ -2,52 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IFire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IFire.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/TracerFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/TracerFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Visual/Materials/Tracer.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Visual/Materials/Tracer.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/Tracer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/Tracer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleSilencerData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleSilencerData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencerData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencerData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleSilencerData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleSilencerData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Shot.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Shot.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/TracerEmission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/TracerEmission.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/WeaponController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/WeaponFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IWeaponFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/WeaponInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/WeaponInventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/InputData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/InputData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyHold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyHold.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IControllable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IControllable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene_Profiles/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene_Profiles/Main Camera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual/Materials/Ceiling Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual/Materials/Ceiling Lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual/Materials/Table Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual/Materials/Table Lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/WeaponData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/WeaponData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual/Materials/Tracer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual/Materials/Tracer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/Tracer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual/Textures/Weapons/Tracer.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +64,16 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/CursorController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/JumpValues.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollision.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionDetector.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCollisionModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerCollisionController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/JumpController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerCrouchModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerJumpModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/JumpController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/DataLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/IData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/CrouchController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
@@ -113,18 +91,28 @@
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/WeaponController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponMod.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/TracerFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IAttachmentData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISilencerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleSilencerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/SilencerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/Player/MoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IControllable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKeyHold.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputAxis.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SilencerFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Weapons/TracerFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" />
     </changedPaths>
@@ -199,7 +187,9 @@
       <workItem from="1609960559177" duration="7936000" />
       <workItem from="1610063698940" duration="9658000" />
       <workItem from="1610131899786" duration="7270000" />
-      <workItem from="1610233277294" duration="12376000" />
+      <workItem from="1610233277294" duration="12423000" />
+      <workItem from="1610272556011" duration="6963000" />
+      <workItem from="1610328690127" duration="4356000" />
     </task>
     <servers />
   </component>
