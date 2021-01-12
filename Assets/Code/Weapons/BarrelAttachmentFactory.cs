@@ -2,31 +2,26 @@
 
 namespace ProjectPrikol
 {
-    public class SilencerFactory : IFactory
+    public sealed class BarrelAttachmentFactory : IFactory
     {
-        private ISilencerData _data;
+        private IBarrelAttachmentData _data;
         
         public Transform Transform { get; private set; }
         public Transform BarrelTransform { get; private set; }
         public AudioSource AudioSource { get; private set; }
 
 
-        public SilencerFactory(ISilencerData data)
+        public BarrelAttachmentFactory(IBarrelAttachmentData data)
         {
             _data = data;
         }
         
         public GameObject Create()
         {
-            var silencer = new GameObject(_data.Name);
-            Transform = silencer.transform;
+            var attachment = Object.Instantiate(_data.Prefab);
+            Transform = attachment.transform;
+            attachment.layer = LayerStorage.GUN_LAYER;
             
-            silencer.AddComponent<MeshFilter>().mesh = _data.Mesh;
-            var renderer = silencer.AddComponent<MeshRenderer>();
-            renderer.material = _data.Material;
-            
-            Transform.localScale = _data.Scale;
-
             BarrelTransform = new GameObject(_data.BarrelName).transform;
             BarrelTransform.parent = Transform;
             BarrelTransform.localPosition = _data.BarrelPosition;
@@ -35,7 +30,7 @@ namespace ProjectPrikol
             AudioSource.loop = false;
             AudioSource.playOnAwake = false;
 
-            return silencer;
+            return attachment;
         }
     }
 }

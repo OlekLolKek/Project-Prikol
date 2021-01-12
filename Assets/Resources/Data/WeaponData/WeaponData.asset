@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponDataRootPath: Data/WeaponData/
   _assaultRifleSilencerDataPath: AssaultRifleSilencerData
+  _assaultRifleScopeDataPath: AssaultRifleScopeData
   _assaultRifleDataPath: AssaultRifleData

@@ -7,24 +7,40 @@ namespace ProjectPrikol
     public class WeaponData : ScriptableObject
     {
         [SerializeField] private string _weaponDataRootPath;
+        
         [SerializeField] private string _assaultRifleSilencerDataPath;
+        [SerializeField] private string _assaultRifleScopeDataPath;
         [SerializeField] private string _assaultRifleDataPath;
 
-        private AssaultRifleSilencerData _assaultRifleSilencerData;
+        private BarrelAttachmentData _assaultRifleSilencerData;
+        private ScopeData _assaultRifleScopeData;
         private AssaultRifleData _assaultRifleData;
 
 
-        public AssaultRifleSilencerData AssaultRifleSilencerData
+        public BarrelAttachmentData AssaultRifleSilencerData
         {
             get
             {
                 if (_assaultRifleSilencerData == null)
                 {
                     _assaultRifleSilencerData =
-                        Load<AssaultRifleSilencerData>(_weaponDataRootPath + _assaultRifleSilencerDataPath);
+                        Load<BarrelAttachmentData>(_weaponDataRootPath + _assaultRifleSilencerDataPath);
                 }
 
                 return _assaultRifleSilencerData;
+            }
+        }
+        
+        public ScopeData AssaultRifleScopeData
+        {
+            get
+            {
+                if (_assaultRifleScopeData == null)
+                {
+                    _assaultRifleScopeData = Load<ScopeData>(_weaponDataRootPath + _assaultRifleScopeDataPath);
+                }
+
+                return _assaultRifleScopeData;
             }
         }
         

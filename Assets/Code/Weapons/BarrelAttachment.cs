@@ -2,21 +2,23 @@
 
 namespace ProjectPrikol
 {
-    public class Silencer : ISilencer
+    public sealed class BarrelAttachment : IBarrelAttachment
     {
         private readonly Transform _weaponBarrel;
-        
-        
-        public Transform SilencerBarrel { get; }
+
+        public Transform AttachmentBarrel { get; }
         public GameObject Instance { get; }
         public bool IsActive { get; set; }
         
 
-        public Silencer(SilencerFactory factory, Weapon weapon)
+        public BarrelAttachment(BarrelAttachmentFactory factory, Weapon weapon)
         {
             Instance = factory.Create();
-            SilencerBarrel = factory.BarrelTransform;
+            AttachmentBarrel = factory.BarrelTransform;
             _weaponBarrel = weapon.Barrel;
+            Instance.transform.parent = _weaponBarrel;
+            Instance.transform.localPosition = Vector3.zero;
+            Instance.transform.localRotation = _weaponBarrel.localRotation;
             Deactivate();
         }
 
@@ -24,9 +26,6 @@ namespace ProjectPrikol
         {
             IsActive = true;
             Instance.SetActive(true);
-            Instance.transform.parent = _weaponBarrel;
-            Instance.transform.localPosition = new Vector3(0.0f, 0.0f, Instance.transform.localScale.z / 2);
-            Instance.transform.localRotation = _weaponBarrel.localRotation;
         }
 
         public void Deactivate()

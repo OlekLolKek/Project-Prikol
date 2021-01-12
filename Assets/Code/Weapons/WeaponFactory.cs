@@ -2,32 +2,34 @@
 
 namespace ProjectPrikol
 {
-    public class WeaponFactory : IWeaponFactory
+    public sealed class WeaponFactory : IWeaponFactory
     {
-        public Transform Transform { get; private set; }
         public Transform BarrelTransform { get; private set; }
+        public Transform ScopeRailTransform { get; private set; }
         public AudioSource AudioSource { get; private set; }
-        
 
         public GameObject Create(IWeaponData data)
         {
-            var gun = new GameObject(data.Name);
-            
-            Transform = gun.transform;
-            Transform.localScale = data.Scale;
-
-            gun.AddComponent<MeshFilter>().mesh = data.Mesh;
-            var renderer = gun.AddComponent<MeshRenderer>();
-            renderer.material = data.Material;
+            var gun = Object.Instantiate(data.Prefab);
+            var parts = gun.GetComponentsInChildren<Transform>();
 
             BarrelTransform = new GameObject(data.BarrelName).transform;
-            BarrelTransform.parent = Transform;
+            BarrelTransform.parent = gun.transform;
             BarrelTransform.localPosition = data.BarrelPosition;
-            
+
             AudioSource = BarrelTransform.gameObject.AddComponent<AudioSource>();
             AudioSource.loop = false;
             AudioSource.playOnAwake = false;
             AudioSource.clip = data.ShotClip;
+
+            ScopeRailTransform = new GameObject(data.ScopeRailName).transform;
+            ScopeRailTransform.parent = gun.transform;
+            ScopeRailTransform.localPosition = data.ScopePosition;
+            
+            foreach (var part in parts)
+            {
+                part.gameObject.layer = LayerStorage.GUN_LAYER;
+            }
 
             return gun;
         }

@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ebf8e75c764aa7be82c84c6c2ff435, type: 3}
   m_Name: AssaultRifleSilencerData
   m_EditorClassIdentifier: 
-  _mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _scale: {x: 0.1, y: 0.1, z: 0.4}
-  _material: {fileID: 2100000, guid: 652107f36a28e44479c0b827dee5852a, type: 2}
-  _barrelPosition: {x: 0, y: 0, z: 0.5}
-  _name: Silencer
+  _prefab: {fileID: -927199367670048503, guid: 66444c9735edba941a803b633eb75ab7, type: 3}
+  _barrelPosition: {x: 0, y: 0, z: 0.45}
   _barrelName: SilencerBarrel

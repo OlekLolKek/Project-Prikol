@@ -20,7 +20,11 @@ MonoBehaviour:
   _cullingLayerMask:
     serializedVersion: 2
     m_Bits: 823
+  _weaponCameraCullingLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   _cameraName: Camera
+  _weaponCameraName: Weapon Camera
   _fovChangeMultiplier: 0.25
   _fov: 75
   _clippingPlaneFar: 100

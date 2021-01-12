@@ -8,6 +8,7 @@ namespace ProjectPrikol
     {
         private CameraData _cameraData;
         public Camera Camera { get; set; }
+        public Camera WeaponCamera { get; set; }
         public Transform CameraTransform { get; set; }
 
         public CameraFactory(CameraData cameraData)
@@ -35,6 +36,16 @@ namespace ProjectPrikol
             postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
 
             Camera.cullingMask = _cameraData.CullingLayerMask.value;
+
+            var weaponCamera = new GameObject(_cameraData.WeaponCameraName);
+            weaponCamera.transform.SetParent(CameraTransform);
+            
+            WeaponCamera = weaponCamera.AddComponent<Camera>();
+            WeaponCamera.depth = 1;
+            WeaponCamera.clearFlags = CameraClearFlags.Depth;
+            WeaponCamera.cullingMask = _cameraData.WeaponCameraCullingLayerMask.value;
+            WeaponCamera.fieldOfView = _cameraData.FOV;
+            WeaponCamera.useOcclusionCulling = false;
 
             return Camera.gameObject;
         }

@@ -22,7 +22,8 @@ namespace ProjectPrikol
         {
             _inventory = new WeaponInventory();
             var factory = new WeaponFactory();
-            var silencerFactory = new SilencerFactory(data.AssaultRifleSilencerData);
+            var silencerFactory = new BarrelAttachmentFactory(data.AssaultRifleSilencerData);
+            var scopeFactory = new ScopeFactory(data.AssaultRifleScopeData);
 
             _primary = inputModel.Weapon1;
             _secondary = inputModel.Weapon2;
@@ -45,8 +46,9 @@ namespace ProjectPrikol
             var weapon = new Weapon(factory, data.AssaultRifleData, cameraModel);
             _inventory.AddWeapon(weapon);
             
-            var silencer = new Silencer(silencerFactory, weapon);
-            _modification = new SilencerModification(silencer);
+            var silencer = new BarrelAttachment(silencerFactory, weapon);
+            var scope = new Scope(scopeFactory, weapon);
+            _modification = new ModificationsController(silencer, scope);
         }
 
         public void Execute(float deltaTime)

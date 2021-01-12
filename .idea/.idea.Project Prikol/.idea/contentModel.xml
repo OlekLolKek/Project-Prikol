@@ -25,13 +25,14 @@
           </e>
           <e p="Data" t="Include">
             <e p="AssaultRifleData.cs" t="Include" />
-            <e p="AssaultRifleSilencerData.cs" t="Include" />
+            <e p="BarrelAttachmentData.cs" t="Include" />
             <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
             <e p="DataLoader.cs" t="Include" />
             <e p="IData.cs" t="Include" />
             <e p="InputData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+            <e p="ScopeData.cs" t="Include" />
             <e p="WeaponData.cs" t="Include" />
           </e>
           <e p="Factories" t="Include">
@@ -67,19 +68,24 @@
           </e>
           <e p="Storages" t="Include">
             <e p="AxisNameStorage.cs" t="Include" />
+            <e p="LayerStorage.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="PlayerView.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
+            <e p="BarrelAttachment.cs" t="Include" />
+            <e p="BarrelAttachmentFactory.cs" t="Include" />
+            <e p="IBarrelAttachment.cs" t="Include" />
+            <e p="IBarrelAttachmentData.cs" t="Include" />
             <e p="IFire.cs" t="Include" />
-            <e p="ISilencer.cs" t="Include" />
-            <e p="ISilencerData.cs" t="Include" />
+            <e p="IScope.cs" t="Include" />
+            <e p="IScopeData.cs" t="Include" />
             <e p="IWeaponData.cs" t="Include" />
             <e p="IWeaponFactory.cs" t="Include" />
-            <e p="Silencer.cs" t="Include" />
-            <e p="SilencerFactory.cs" t="Include" />
-            <e p="SilencerModification.cs" t="Include" />
+            <e p="ModificationsController.cs" t="Include" />
+            <e p="Scope.cs" t="Include" />
+            <e p="ScopeFactory.cs" t="Include" />
             <e p="TracerFactory.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
             <e p="WeaponController.cs" t="Include" />

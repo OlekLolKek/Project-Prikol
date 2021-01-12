@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
+
 namespace ProjectPrikol
 {
-    public interface ISilencer
+    public interface IScope
     {
-        Transform SilencerBarrel { get; }
         GameObject Instance { get; }
         bool IsActive { get; set; }
 

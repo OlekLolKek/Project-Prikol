@@ -34,6 +34,7 @@ namespace ProjectPrikol
 
         #region Properties
 
+        public Transform ScopeRail { get; private set; }
         public Transform Barrel { get; private set; }
         public bool IsActive { get; private set; }
         public float Damage { get; set; }
@@ -57,6 +58,7 @@ namespace ProjectPrikol
             _instance = factory.Create(data);
             Barrel = factory.BarrelTransform;
             _baseBarrel = Barrel;
+            ScopeRail = factory.ScopeRailTransform;
             _audioSource = factory.AudioSource;
 
             _cameraTransform = cameraModel.CameraTransform;
