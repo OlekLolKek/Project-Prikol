@@ -13,7 +13,7 @@ namespace ProjectPrikol
             _scope = scope;
         }
 
-        protected override Weapon AddModification(Weapon weapon)
+        protected override IWeapon AddModification(IWeapon weapon)
         {
             _barrelAttachment.Activate();
             weapon.SetModdedValues(_barrelAttachment.AttachmentBarrel, 
@@ -24,7 +24,7 @@ namespace ProjectPrikol
             return weapon;
         }
 
-        protected override Weapon RemoveModification(Weapon weapon)
+        protected override IWeapon RemoveModification(IWeapon weapon)
         {
             _barrelAttachment.Deactivate();
             weapon.SetDefaultValues();

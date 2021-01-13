@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: -927199367670048503, guid: 66444c9735edba941a803b633eb75ab7, type: 3}
   _barrelPosition: {x: 0, y: 0, z: 0.45}
+  _attachmentShotClip: {fileID: 8300000, guid: 15448da728924e349935f11a4dd3e33c, type: 3}
   _barrelName: SilencerBarrel

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ProjectPrikol
 {
-    public class Weapon : IExecutable, IFire
+    public class Weapon : IWeapon
     {
         #region Fields
 
@@ -13,7 +13,6 @@ namespace ProjectPrikol
         private readonly AudioSource _baseAudioSource;
         private readonly TracerFactory _tracerFactory;
         private readonly LayerMask _hitLayerMask;
-        private readonly GameObject _instance;
         private readonly Transform _cameraTransform;
         private readonly Transform _baseBarrel;
         private readonly Camera _camera;
@@ -34,6 +33,7 @@ namespace ProjectPrikol
 
         #region Properties
 
+        public GameObject Instance { get; }
         public Transform ScopeRail { get; private set; }
         public Transform Barrel { get; private set; }
         public AudioSource AudioSource { get; private set; }
@@ -56,7 +56,7 @@ namespace ProjectPrikol
             _tracerFadeMultiplier = data.TracerFadeMultiplier;
             _maxShotDistance = data.MaxShotDistance;
 
-            _instance = factory.Create(data);
+            Instance = factory.Create(data);
             Barrel = factory.BarrelTransform;
             _baseBarrel = Barrel;
             ScopeRail = factory.ScopeRailTransform;
@@ -66,8 +66,8 @@ namespace ProjectPrikol
             _cameraTransform = cameraModel.CameraTransform;
             _camera = cameraModel.Camera;
 
-            _instance.transform.parent = _cameraTransform;
-            _instance.transform.localPosition = _position;
+            Instance.transform.parent = _cameraTransform;
+            Instance.transform.localPosition = _position;
 
             _tracerFactory = new TracerFactory(data);
             
@@ -128,7 +128,7 @@ namespace ProjectPrikol
             var rotation = Vector3.zero;
             rotation.y += mouseX;
             rotation.x -= mouseY;
-            _instance.transform.localEulerAngles = rotation;
+            Instance.transform.localEulerAngles = rotation;
         }
 
         public void SetModdedValues(Transform barrel, AudioSource audioSource)
@@ -142,17 +142,17 @@ namespace ProjectPrikol
             Barrel = _baseBarrel;
             AudioSource = _baseAudioSource;
         }
-
+        
         public void Activate()
         {
             IsActive = true;
-            _instance.SetActive(true);
+            Instance.SetActive(true);
         }
 
         public void Deactivate()
         {
             IsActive = false;
-            _instance.SetActive(false);
+            Instance.SetActive(false);
         }
 
         #endregion

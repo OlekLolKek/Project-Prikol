@@ -4,7 +4,7 @@ namespace ProjectPrikol
 {
     public sealed class ScopeFactory : IFactory
     {
-        private IScopeData _data;
+        private readonly IScopeData _data;
         
         public Transform Transform { get; private set; }
         

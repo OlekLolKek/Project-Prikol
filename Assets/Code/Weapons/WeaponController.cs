@@ -9,10 +9,12 @@ namespace ProjectPrikol
         private readonly IInputKeyPress _melee;
         private readonly IInputKeyPress _fire;
         private readonly IInputKeyPress _changeMod;
+        private readonly IInputKeyPress _switchSafety;
         private readonly IInputAxisChange _mouseXInput;
         private readonly IInputAxisChange _mouseYInput;
         private readonly WeaponInventory _inventory;
         private readonly WeaponModification _modification;
+        private readonly WeaponSafetyProxy _arSafetyProxy;
 
         private float _mouseX;
         private float _mouseY;
@@ -21,7 +23,7 @@ namespace ProjectPrikol
             CameraModel cameraModel)
         {
             _inventory = new WeaponInventory();
-            var factory = new WeaponFactory();
+            var weaponFactory = new WeaponFactory();
             var silencerFactory = new BarrelAttachmentFactory(data.AssaultRifleSilencerData);
             var scopeFactory = new ScopeFactory(data.AssaultRifleScopeData);
 
@@ -32,6 +34,7 @@ namespace ProjectPrikol
             _mouseYInput = inputModel.MouseY;
             _changeMod = inputModel.ChangeMod;
             _fire = inputModel.Fire;
+            _switchSafety = inputModel.Safety;
 
             _primary.OnKeyPressed += SelectPrimaryWeapon;
             _secondary.OnKeyPressed += SelectSecondaryWeapon;
@@ -40,11 +43,13 @@ namespace ProjectPrikol
             _changeMod.OnKeyPressed += ChangeModification;
             _mouseXInput.OnAxisChanged += MouseXChange;
             _mouseYInput.OnAxisChanged += MouseYChange;
-            
+            _switchSafety.OnKeyPressed += SwitchSafety;
 
             
-            var weapon = new Weapon(factory, data.AssaultRifleData, cameraModel);
-            _inventory.AddWeapon(weapon);
+            var weapon = new Weapon(weaponFactory, data.AssaultRifleData, cameraModel);
+            var safetyFactory = new SafetyFactory(data.SafetyData);
+            _arSafetyProxy = new WeaponSafetyProxy(weapon, safetyFactory);
+            _inventory.AddWeapon(_arSafetyProxy);
             
             var silencer = new BarrelAttachment(silencerFactory, weapon);
             var scope = new Scope(scopeFactory, weapon);
@@ -97,11 +102,17 @@ namespace ProjectPrikol
             _changeMod.OnKeyPressed -= ChangeModification;
             _mouseXInput.OnAxisChanged -= MouseXChange;
             _mouseYInput.OnAxisChanged -= MouseYChange;
+            _switchSafety.OnKeyPressed -= SwitchSafety;
         }
 
         private void ChangeModification()
         {
             _modification.SwitchModifications(_inventory.ActiveWeapon);
+        }
+
+        private void SwitchSafety()
+        {
+            _arSafetyProxy.SwitchSafety();
         }
     }
 }

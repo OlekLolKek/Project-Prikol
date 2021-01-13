@@ -1,14 +1,19 @@
-﻿namespace ProjectPrikol
+﻿using UnityEngine;
+
+namespace ProjectPrikol
 {
-    public abstract class WeaponModification : IFire
+    public abstract class WeaponModification : IWeapon
     {
-        private Weapon _weapon;
+        private IWeapon _weapon;
         private bool _isApplied;
 
-        protected abstract Weapon AddModification(Weapon weapon);
-        protected abstract Weapon RemoveModification(Weapon weapon);
+        public GameObject Instance => _weapon.Instance;
 
-        public void SwitchModifications(Weapon weapon)
+
+        protected abstract IWeapon AddModification(IWeapon weapon);
+        protected abstract IWeapon RemoveModification(IWeapon weapon);
+
+        public void SwitchModifications(IWeapon weapon)
         {
             if (_isApplied)
             {
@@ -21,10 +26,40 @@
                 _isApplied = true;
             }
         }
-        
+
         public void Fire()
         {
             _weapon.Fire();
+        }
+
+        public void Activate()
+        {
+            _weapon.Activate();
+        }
+
+        public void Deactivate()
+        {
+            _weapon.Deactivate();
+        }
+
+        public void Rotate(float mouseX, float mouseY)
+        {
+            _weapon.Rotate(mouseX, mouseY);
+        }
+
+        public void SetModdedValues(Transform barrel, AudioSource audioSource)
+        {
+            _weapon.SetModdedValues(barrel, audioSource);
+        }
+
+        public void SetDefaultValues()
+        {
+            _weapon.SetDefaultValues();
+        }
+
+        public void Execute(float deltaTime)
+        {
+            _weapon.Execute(deltaTime);
         }
     }
 }

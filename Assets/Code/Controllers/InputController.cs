@@ -2,12 +2,13 @@
 {
     public class InputController : IExecutable
     {
-        private Inputs _inputs;
+        private readonly Inputs _inputs;
 
         public InputController(InputModel inputModel)
         {
-            _inputs.Add(inputModel.Horizontal);
+            _inputs = new Inputs();
             
+            _inputs.Add(inputModel.Horizontal);
             _inputs.Add(inputModel.Vertical);
             _inputs.Add(inputModel.MouseX);
             _inputs.Add(inputModel.MouseY);
@@ -21,8 +22,7 @@
             _inputs.Add(inputModel.Fire);
             _inputs.Add(inputModel.Safety);
         }
-        
-        
+
         public void Execute(float deltaTime)
         {
             _inputs.Execute(deltaTime);

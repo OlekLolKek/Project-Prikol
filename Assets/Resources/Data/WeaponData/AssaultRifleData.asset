@@ -21,7 +21,6 @@ MonoBehaviour:
   _barrelPosition: {x: 0, y: 0.2, z: 1.19}
   _scopePosition: {x: 0, y: 0.26, z: 0.15}
   _position: {x: 0.6, y: -0.5, z: 0.75}
-  _name: AssaultRifle
   _barrelName: Barrel
   _scopeRailName: Scope Rail
   _tracerName: Tracer

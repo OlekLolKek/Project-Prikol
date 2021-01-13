@@ -7,10 +7,10 @@ namespace ProjectPrikol
     public class WeaponInventory
     {
         //TODO: replace 3 with a field
-        private Weapon[] _weapons = new Weapon[3];
+        private IWeapon[] _weapons = new IWeapon[3];
         private int _activeWeaponID;
 
-        public Weapon ActiveWeapon
+        public IWeapon ActiveWeapon
         {
             get
             {
@@ -18,7 +18,7 @@ namespace ProjectPrikol
             }
         }
 
-        public void AddWeapon(Weapon weapon)
+        public void AddWeapon(IWeapon weapon)
         {
             for (int i = 0; i < _weapons.Length; i++)
             {
@@ -46,7 +46,7 @@ namespace ProjectPrikol
 
         
         //TODO: replace with actual dropping instead of deleting
-        public void DropWeapon(Weapon weapon)
+        public void DropWeapon(IWeapon weapon)
         {
             _weapons[_activeWeaponID] = null;
         }

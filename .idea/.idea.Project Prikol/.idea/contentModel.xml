@@ -32,6 +32,7 @@
             <e p="IData.cs" t="Include" />
             <e p="InputData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+            <e p="SafetyData.cs" t="Include" />
             <e p="ScopeData.cs" t="Include" />
             <e p="WeaponData.cs" t="Include" />
           </e>
@@ -80,12 +81,14 @@
             <e p="BarrelAttachmentFactory.cs" t="Include" />
             <e p="IBarrelAttachment.cs" t="Include" />
             <e p="IBarrelAttachmentData.cs" t="Include" />
-            <e p="IFire.cs" t="Include" />
+            <e p="ISafetyData.cs" t="Include" />
             <e p="IScope.cs" t="Include" />
             <e p="IScopeData.cs" t="Include" />
+            <e p="IWeapon.cs" t="Include" />
             <e p="IWeaponData.cs" t="Include" />
             <e p="IWeaponFactory.cs" t="Include" />
             <e p="ModificationsController.cs" t="Include" />
+            <e p="SafetyFactory.cs" t="Include" />
             <e p="Scope.cs" t="Include" />
             <e p="ScopeFactory.cs" t="Include" />
             <e p="TracerFactory.cs" t="Include" />
@@ -94,8 +97,7 @@
             <e p="WeaponFactory.cs" t="Include" />
             <e p="WeaponInventory.cs" t="Include" />
             <e p="WeaponModification.cs" t="Include" />
-            <e p="WeaponProxy.cs" t="Include" />
-            <e p="WeaponSafety.cs" t="Include" />
+            <e p="WeaponSafetyProxy.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

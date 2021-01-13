@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 namespace ProjectPrikol
 {
     public interface IScopeData

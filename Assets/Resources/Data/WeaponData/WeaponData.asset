@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponDataRootPath: Data/WeaponData/
   _assaultRifleSilencerDataPath: AssaultRifleSilencerData
   _assaultRifleScopeDataPath: AssaultRifleScopeData
+  _safetyDataPath: SafetyData
   _assaultRifleDataPath: AssaultRifleData
