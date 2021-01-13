@@ -10,7 +10,7 @@ namespace ProjectPrikol
         #region Fields
 
         private AudioClip _audioClip;
-        private readonly AudioSource _audioSource;
+        private readonly AudioSource _baseAudioSource;
         private readonly TracerFactory _tracerFactory;
         private readonly LayerMask _hitLayerMask;
         private readonly GameObject _instance;
@@ -36,6 +36,7 @@ namespace ProjectPrikol
 
         public Transform ScopeRail { get; private set; }
         public Transform Barrel { get; private set; }
+        public AudioSource AudioSource { get; private set; }
         public bool IsActive { get; private set; }
         public float Damage { get; set; }
         public float ShootCooldown { get; set; }
@@ -59,7 +60,8 @@ namespace ProjectPrikol
             Barrel = factory.BarrelTransform;
             _baseBarrel = Barrel;
             ScopeRail = factory.ScopeRailTransform;
-            _audioSource = factory.AudioSource;
+            AudioSource = factory.AudioSource;
+            _baseAudioSource = AudioSource;
 
             _cameraTransform = cameraModel.CameraTransform;
             _camera = cameraModel.Camera;
@@ -98,7 +100,7 @@ namespace ProjectPrikol
                 line.SetPosition(1, _cameraTransform.localPosition + _cameraTransform.forward * _maxShotDistance);
             }
 
-            _audioSource.Play();
+            AudioSource.Play();
 
             TweenLineWidth(line).ToObservable().Subscribe();
         }
@@ -129,26 +131,22 @@ namespace ProjectPrikol
             _instance.transform.localEulerAngles = rotation;
         }
 
-        public void SetBarrelPosition(Transform barrel)
+        public void SetModdedValues(Transform barrel, AudioSource audioSource)
         {
             Barrel = barrel;
+            AudioSource = audioSource;
         }
 
-        public void ResetBarrelPosition()
+        public void SetDefaultValues()
         {
             Barrel = _baseBarrel;
-        }
-
-        public void SetAudioClip(AudioClip clip)
-        {
-            _audioSource.clip = clip;
+            AudioSource = _baseAudioSource;
         }
 
         public void Activate()
         {
             IsActive = true;
             _instance.SetActive(true);
-            //.transform.localRotation = Quaternion.identity;
         }
 
         public void Deactivate()

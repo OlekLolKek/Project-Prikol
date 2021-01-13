@@ -12,6 +12,7 @@ namespace ProjectPrikol
         [SerializeField] private KeyCode _weapon3;
         [SerializeField] private KeyCode _changeMod;
         [SerializeField] private KeyCode _fire;
+        [SerializeField] private KeyCode _safety;
 
         public KeyCode Crouch => _crouch;
         public KeyCode Jump => _jump;
@@ -20,5 +21,6 @@ namespace ProjectPrikol
         public KeyCode Weapon3 => _weapon3;
         public KeyCode ChangeMod => _changeMod;
         public KeyCode Fire => _fire;
+        public KeyCode Safety => _safety;
     }
 }

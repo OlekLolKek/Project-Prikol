@@ -29,6 +29,7 @@ namespace ProjectPrikol
             AudioSource = BarrelTransform.gameObject.AddComponent<AudioSource>();
             AudioSource.loop = false;
             AudioSource.playOnAwake = false;
+            AudioSource.clip = _data.AttachmentShotClip;
 
             return attachment;
         }

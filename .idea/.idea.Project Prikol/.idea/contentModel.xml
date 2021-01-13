@@ -40,6 +40,7 @@
             <e p="PlayerFactory.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
+            <e p="Inputs.cs" t="Include" />
             <e p="PCInputAxis.cs" t="Include" />
             <e p="PCInputKeyDown.cs" t="Include" />
             <e p="PCInputKeyHold.cs" t="Include" />
@@ -53,6 +54,7 @@
             <e p="IInitializable.cs" t="Include" />
             <e p="ILateExecutable.cs" t="Include" />
             <e p="Input" t="Include">
+              <e p="IInput.cs" t="Include" />
               <e p="IInputAxisChange.cs" t="Include" />
               <e p="IInputKeyHold.cs" t="Include" />
               <e p="IInputKeyPress.cs" t="Include" />
@@ -92,6 +94,8 @@
             <e p="WeaponFactory.cs" t="Include" />
             <e p="WeaponInventory.cs" t="Include" />
             <e p="WeaponModification.cs" t="Include" />
+            <e p="WeaponProxy.cs" t="Include" />
+            <e p="WeaponSafety.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

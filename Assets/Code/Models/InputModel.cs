@@ -18,6 +18,7 @@ namespace ProjectPrikol
         public IInputKeyPress Weapon3 { get; }
         public IInputKeyPress ChangeMod { get; }
         public IInputKeyPress Fire { get; }
+        public IInputKeyPress Safety { get; }
 
         #endregion
 
@@ -36,6 +37,7 @@ namespace ProjectPrikol
             Weapon3 = new PCInputKeyDown(inputData.Weapon3);
             ChangeMod = new PCInputKeyDown(inputData.ChangeMod);
             Fire = new PCInputKeyDown(inputData.Fire);
+            Safety = new PCInputKeyDown(inputData.Safety);
         }
     }
 }

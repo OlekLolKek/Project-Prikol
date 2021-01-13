@@ -12,8 +12,7 @@ namespace ProjectPrikol
         [SerializeField] private Vector3 _barrelPosition;
         [SerializeField] private Vector3 _scopePosition;
         [SerializeField] private Vector3 _position;
-
-        [SerializeField] private string _name;
+        
         [SerializeField] private string _barrelName;
         [SerializeField] private string _scopeRailName;
         [SerializeField] private string _tracerName;
@@ -31,7 +30,6 @@ namespace ProjectPrikol
         public Vector3 BarrelPosition => _barrelPosition;
         public Vector3 ScopePosition => _scopePosition;
         public Vector3 Position => _position;
-        public string Name => _name;
         public string BarrelName => _barrelName;
         public string ScopeRailName => _scopeRailName;
         public string TracerName => _tracerName;

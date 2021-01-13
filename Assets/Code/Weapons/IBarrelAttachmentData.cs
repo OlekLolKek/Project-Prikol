@@ -6,6 +6,7 @@ namespace ProjectPrikol
     {
         GameObject Prefab { get; }
         Vector3 BarrelPosition { get; }
+        AudioClip AttachmentShotClip { get; }
         string BarrelName { get; }
     }
 }

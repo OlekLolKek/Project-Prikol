@@ -2,7 +2,7 @@
 
 namespace ProjectPrikol
 {
-    public interface IInputKeyRelease
+    public interface IInputKeyRelease : IInput
     {
         event Action OnKeyReleased;
         void GetKeyUp();

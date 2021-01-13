@@ -2,7 +2,7 @@
 
 namespace ProjectPrikol
 {
-    public interface IInputAxisChange
+    public interface IInputAxisChange : IInput
     {
         event Action<float> OnAxisChanged;
         void GetAxis();

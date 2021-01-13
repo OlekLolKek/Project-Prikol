@@ -7,6 +7,7 @@ namespace ProjectPrikol
         private readonly Transform _weaponBarrel;
 
         public Transform AttachmentBarrel { get; }
+        public AudioSource AttachmentAudioSource { get; }
         public GameObject Instance { get; }
         public bool IsActive { get; set; }
         
@@ -15,6 +16,7 @@ namespace ProjectPrikol
         {
             Instance = factory.Create();
             AttachmentBarrel = factory.BarrelTransform;
+            AttachmentAudioSource = factory.AudioSource;
             _weaponBarrel = weapon.Barrel;
             Instance.transform.parent = _weaponBarrel;
             Instance.transform.localPosition = Vector3.zero;

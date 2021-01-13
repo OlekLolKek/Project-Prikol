@@ -2,7 +2,7 @@
 
 namespace ProjectPrikol
 {
-    public interface IInputKeyHold
+    public interface IInputKeyHold : IInput
     {
         event Action<bool> OnKeyHeld;
         void GetKey();

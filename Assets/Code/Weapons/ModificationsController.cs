@@ -16,7 +16,8 @@ namespace ProjectPrikol
         protected override Weapon AddModification(Weapon weapon)
         {
             _barrelAttachment.Activate();
-            weapon.SetBarrelPosition(_barrelAttachment.AttachmentBarrel);
+            weapon.SetModdedValues(_barrelAttachment.AttachmentBarrel, 
+                _barrelAttachment.AttachmentAudioSource);
             
             _scope.Activate();
             
@@ -26,7 +27,7 @@ namespace ProjectPrikol
         protected override Weapon RemoveModification(Weapon weapon)
         {
             _barrelAttachment.Deactivate();
-            weapon.ResetBarrelPosition();
+            weapon.SetDefaultValues();
             
             _scope.Deactivate();
 

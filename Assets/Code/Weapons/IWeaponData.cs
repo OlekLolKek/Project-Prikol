@@ -11,7 +11,6 @@ namespace ProjectPrikol
         Vector3 BarrelPosition { get; }
         Vector3 ScopePosition { get; }
         Vector3 Position { get; }
-        string Name { get; }
         string BarrelName { get; }
         string ScopeRailName { get; }
         string TracerName { get; }
