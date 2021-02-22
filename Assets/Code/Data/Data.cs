@@ -22,7 +22,6 @@ namespace ProjectPrikol
 
 
         #region Properties
-
         public PlayerData PlayerData
         {
             get

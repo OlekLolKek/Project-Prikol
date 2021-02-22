@@ -3,7 +3,7 @@
 
 namespace ProjectPrikol
 {
-    public class PlayerFactory : IFactory
+    public sealed class PlayerFactory : IFactory
     {
         private PlayerData _playerData;
         
