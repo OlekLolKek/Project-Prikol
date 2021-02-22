@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/SafetyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/SafetyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISafetyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ISafetyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SafetyFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/SafetyFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafetyProxy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/SafetyData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/SafetyData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Click.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Click.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_03.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_03.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_04.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_04.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_05.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_05.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_06.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_06.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_07.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_07.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_08.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_08.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_09.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_09.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_10.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_10.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_11.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_11.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_12.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_12.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_13.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_13.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_14.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_14.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_15.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_15.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_16.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Electronic/Click_Electronic_16.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Heavy_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Heavy_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Mechanical_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Mechanical_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Mechanical_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Mechanical_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Sharp_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Sharp_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Soft_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_03.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_03.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_04.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_04.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_05.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Click_Standard_05.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_03.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_03.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_04.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_04.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_05.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_05.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_06.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_06.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_07.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_07.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_08.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_08.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_09.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_09.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_10.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_10.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_11.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_11.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_12.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_12.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_13.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_13.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_14.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_14.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_15.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_15.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_16.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_16.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_17.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_17.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_18.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_18.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_19.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_19.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_20.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_20.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_21.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_21.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_22.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_22.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_23.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_23.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_24.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_24.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_25.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_25.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_26.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_26.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_27.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_27.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_28.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_28.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_29.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_29.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_30.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_30.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_31.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_31.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_32.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_32.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_33.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_33.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_34.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_34.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_35.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_35.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_36.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_36.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_37.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_37.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_38.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_38.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_39.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_39.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_40.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_40.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_41.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_41.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_42.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_42.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_43.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_43.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_44.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_44.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_45.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_45.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_46.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_46.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_47.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_47.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_48.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_48.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_49.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_49.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_50.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_50.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_51.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_51.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_52.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_52.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_53.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_53.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_54.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_54.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_55.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_55.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_56.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_56.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_57.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_57.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_58.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_58.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_59.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_59.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_60.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_60.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_61.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_61.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_62.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_62.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_63.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_63.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_64.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_64.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_65.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_65.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_66.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_66.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_Special_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Mouth/Mouth_Special_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Electronic_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_01.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Sharp_02.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Soft_00.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Mp3/Slide_Soft_00.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_08.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_08.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_09.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_09.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_10.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_10.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_11.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_11.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_12.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_12.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_13.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_13.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_14.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_14.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_15.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_15.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_16.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Electronic/Click_Electronic_16.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Heavy_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Heavy_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Mechanical_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Mechanical_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Mechanical_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Mechanical_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Sharp_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Sharp_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Soft_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Click_Standard_05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_08.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_08.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_09.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_09.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_10.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_10.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_11.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_11.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_12.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_12.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_13.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_13.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_14.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_14.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_15.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_15.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_16.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_16.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_17.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_17.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_18.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_18.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_19.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_19.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_20.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_20.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_21.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_21.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_22.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_22.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_23.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_23.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_24.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_24.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_25.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_25.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_26.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_26.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_27.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_27.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_28.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_28.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_29.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_29.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_30.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_30.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_31.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_31.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_32.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_32.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_33.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_33.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_34.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_34.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_35.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_35.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_36.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_36.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_37.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_37.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_38.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_38.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_39.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_39.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_40.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_40.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_41.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_41.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_42.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_42.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_43.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_43.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_44.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_44.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_45.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_45.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_46.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_46.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_47.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_47.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_48.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_48.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_49.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_49.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_50.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_50.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_51.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_51.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_52.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_52.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_53.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_53.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_54.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_54.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_55.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_55.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_56.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_56.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_57.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_57.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_58.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_58.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_59.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_59.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_60.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_60.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_61.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_61.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_62.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_62.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_63.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_63.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_64.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_64.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_65.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_65.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_66.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_66.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_Special_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Mouth/Mouth_Special_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Electronic_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_00.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Sharp_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Soft_00.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Sfx/Wav/Slide_Soft_00.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Prikol/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/ScopeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/ScopeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/IFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/IFire.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IWeapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/IScopeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/IScopeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/ModificationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ModificationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/ScopeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/ScopeFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponProxy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponProxy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafetyProxy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafety.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafety.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/InputData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/InputData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleSilencerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/AssaultRifleSilencerData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/WeaponData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/WeaponData/WeaponData.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/IData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Runtime/PostProcessLayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/2c/ac94be44/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SilencerModification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SilencerFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISilencerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/Silencer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Storages/LayerStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISilencer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IScope.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleSilencerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleScopeData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ScopeModification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/BarrelAttachmentModification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/Scope.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IBarrelAttachment.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/BarrelAttachment.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IBarrelAttachmentData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/BarrelAttachmentData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/BarrelAttachmentFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/AssaultRifleData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IWeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Test/Test.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Test/SerializableDictionary.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Test/DictionaryDrawer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/InputData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputAxisChange.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyHold.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/Input/IInputKeyRelease.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/Inputs.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponInventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ModificationsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ScopeFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IScopeData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/IWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/Weapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/ScopeData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/SafetyData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/ISafetyData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/WeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/SafetyFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponModification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponProxy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafety.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponSafetyProxy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Weapons/WeaponController.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1m1PgBgmx0wFuASJ2AYna74lKTs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="597d5810-8552-43ee-a038-1e1effd96a5d" name="Default Changelist" comment="" />
+      <created>1608658235762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608658235762</updated>
+      <workItem from="1608658244186" duration="4275000" />
+      <workItem from="1608669087662" duration="4000" />
+      <workItem from="1608738104889" duration="598000" />
+      <workItem from="1608826679810" duration="1617000" />
+      <workItem from="1608833254527" duration="6610000" />
+      <workItem from="1608910497235" duration="8704000" />
+      <workItem from="1608997256821" duration="3500000" />
+      <workItem from="1609001288556" duration="3918000" />
+      <workItem from="1609085231861" duration="1331000" />
+      <workItem from="1609104693819" duration="2259000" />
+      <workItem from="1609176610537" duration="5285000" />
+      <workItem from="1609201847764" duration="1324000" />
+      <workItem from="1609229812276" duration="12469000" />
+      <workItem from="1609329148521" duration="577000" />
+      <workItem from="1609329863770" duration="11937000" />
+      <workItem from="1609427783787" duration="9762000" />
+      <workItem from="1609511605917" duration="8724000" />
+      <workItem from="1609598418126" duration="9197000" />
+      <workItem from="1609686025398" duration="1238000" />
+      <workItem from="1609776453615" duration="5074000" />
+      <workItem from="1609804773512" duration="2583000" />
+      <workItem from="1609869446301" duration="1055000" />
+      <workItem from="1609960559177" duration="7936000" />
+      <workItem from="1610063698940" duration="9658000" />
+      <workItem from="1610131899786" duration="7270000" />
+      <workItem from="1610233277294" duration="12423000" />
+      <workItem from="1610272556011" duration="6963000" />
+      <workItem from="1610328690127" duration="9251000" />
+      <workItem from="1610420379210" duration="10859000" />
+      <workItem from="1610470091315" duration="625000" />
+      <workItem from="1610523200347" duration="16589000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
